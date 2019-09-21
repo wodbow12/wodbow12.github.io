@@ -24,24 +24,24 @@ sidebar:
     codewars:
     goodreads: # Number-Username, e.g. 123456-alandoe
 
-    languages:
-      - idiom: English
-        level: Native
+    #languages:
+    #  - idiom: English
+    #    level: Native
 
-      - idiom: French
-        level: Professional
+    # - idiom: French
+    #    level: Professional
 
-      - idiom: Spanish
-        level: Professional
+    #  - idiom: Spanish
+    #    level: Professional
 
     interests:
-      - item: Climbing
+      - item: 게임
         link:
 
-      - item: Snowboarding
+      - item: 낚시
         link:
 
-      - item: Cooking
+      - item: 세차
         link:
 
 career-profile:
@@ -53,34 +53,33 @@ career-profile:
       리 페이지를 제작 및 운영했으며, 기획부터 개발 및 운영에 이르는 전반적인 업무를 소화할
       수 있습니다.
 
-      Second paragraph if required.
 
 education:
-    - degree: MSc in Computer Science
-      university: University of London
-      time: 2011 - 2012
-      details: |
-        Describe your study here lorem ipsum dolor sit amet, consectetuer
-        adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
-        sociis natoque penatibus et magnis dis parturient montes, nascetur
-        ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-        pretium quis, sem.
+    - degree: 컴퓨터응용과학부 컴퓨터시뮬레이션학과
+      university: 인제대학교 김해캠퍼스
+      time: 2005 - 2012
+     # details: |
+     #   Describe your study here lorem ipsum dolor sit amet, consectetuer
+     #   adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
+     #   sociis natoque penatibus et magnis dis parturient montes, nascetur
+     #   ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
+     #   pretium quis, sem.
 
-          - Bullet point
-          - Bullet point
+     #     - Bullet point
+     #     - Bullet point
 
-    - degree: BSc in Applied Mathematics
-      university: Bristol University
-      time: 2007 - 2011
-      details: |
-        Describe your study here lorem ipsum dolor sit amet, consectetuer
-        adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
-        sociis natoque penatibus et magnis dis parturient montes, nascetur
-        ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-        pretium quis, sem.
+    #- degree: BSc in Applied Mathematics
+    #  university: Bristol University
+    #  time: 2007 - 2011
+    #  details: |
+    #    Describe your study here lorem ipsum dolor sit amet, consectetuer
+    #    adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
+    #    sociis natoque penatibus et magnis dis parturient montes, nascetur
+    #    ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
+    #    pretium quis, sem.
 
-          - Bullet point
-          - Bullet point
+    #      - Bullet point
+    #      - Bullet point
 
 experiences:
     - role: Lead Developer
