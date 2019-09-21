@@ -67,8 +67,8 @@ education:
      #   ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
      #   pretium quis, sem.
 
-     #     - Bullet point
-     #     - Bullet point
+        - Bullet point
+        - Bullet point
 
     #- degree: BSc in Applied Mathematics
     #  university: Bristol University
