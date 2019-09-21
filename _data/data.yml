@@ -178,17 +178,17 @@ skills:
     title: Skills &amp; Proficiency
 
     toolset:
-      - name: Python & PyQT
-        level: 80%
-
+      - name: PHP
+        level: 98%
+        
       - name: Javascript & jQuery
         level: 98%
 
       - name: HTML5 & CSS
         level: 95%
 
-      - name: PHP
-        level: 98%
+      - name: Python & PyQT
+        level: 80%
 
       - name: Sketch & Photoshop
         level: 60%
