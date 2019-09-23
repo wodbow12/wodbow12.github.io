@@ -66,7 +66,7 @@ experiences:
         해당 회사에서 그룹웨어, 공정관리 시스템, 라이브러리 시스템, In-House 툴 개발, 정부지원사업을 PHP와 Python을 이용하여 개발하였습니다.         
 
           - 그룹웨어
-          > 개발 환경 : Linux CentOS 5, Apache 2.4, PHP 5.6, MySql 5.5, JQuery 1.9.1
+          | 개발 환경 : Linux CentOS 5, Apache 2.4, PHP 5.6, MySql 5.5, JQuery 1.9.1
           - Bullet point
 
     - role: 웹 개발팀 | 웹 개발 사원 (연구원)
