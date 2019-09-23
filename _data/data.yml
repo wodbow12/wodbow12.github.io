@@ -72,6 +72,10 @@ experiences:
           - <p style="font-weight:bold;">공정관리 시스템</p>
             <p style="color: #97AAC3;">개발 내용 : 데이터 관리, 스케줄 관리, 퍼블리싱/컨펌 관리</p>
             <p style="color: #97AAC3;">개발 환경 : Linux CentOS 6, Apache 2.4, PHP 5.6, MySql 5.5, JQuery 1.9.1, Python 2.7, PyQT 4</p>
+            <img src="pms_img/Shot.png" style="max-width:100%;" />
+            <img src="pms_img/3D_Lib.png" style="max-width:100%;" />
+            <img src="pms_img/Task.png" style="max-width:100%;" />
+            <img src="pms_img/Schedule.png" style="max-width:100%;" />
           - <p style="font-weight:bold;">Shotgun 3rd Party App</p>
             <p style="color: #97AAC3;">개발 내용 : 퍼블리싱/컨펌 관리, Shot/Asset 자동 등록, 동영상 컨버팅</p>
             <p style="color: #97AAC3;">개발 환경 : Linux CentOS 6, Python 2.7</p>
