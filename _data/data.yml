@@ -98,7 +98,7 @@ experiences:
             <img src="center_img/labcenter2.png" style="max-width:100%;" />
             <p><p/>
             <img src="center_img/labcenter3.png" style="max-width:100%;" />
-          - <p style="font-weight:bold;">창원대학교 공동실험실습관</p>
+          - <p style="font-weight:bold;">창원대학교 공동실험실습관 <a href="https://centlab.changwon.ac.kr" target="_blank" style="color: #97AAC3;">바로가기</a></p>
             <p style="color: #97AAC3;">개발 내용 : SSL 적용, 고객센터 게시판 개발, 기기 이용 신청 기능 개선 및 사이트 유지보수</p>
             <p style="color: #97AAC3;">개발 환경 : Windows Server 2008, IIS 7, Asp.Net 3.5, SQL Server 2008 R2</p>
             <img src="center_img/centlab1.png" style="max-width:100%;" />
@@ -106,7 +106,7 @@ experiences:
             <img src="center_img/centlab2.png" style="max-width:100%;" />
             <p><p/>
             <img src="center_img/centlab3.png" style="max-width:100%;" />
-          - <p style="font-weight:bold;">창원대학교 실험실 안전관리시스템</p>
+          - <p style="font-weight:bold;">창원대학교 실험실 안전관리시스템 <a href="http://labsafety.changwon.ac.kr" target="_blank" style="color: #97AAC3;">바로가기</a></p>
             <p style="color: #97AAC3;">개발 내용 : 전자결재, 근태관리, 스케줄 관리, 자산 관리, 전자 게시판</p>
             <p style="color: #97AAC3;">개발 환경 : Windows Server 2012, IIS 8, Asp.Net MVC 5, SQL Server 2012</p>
             <img src="center_img/labsafety1.png" style="max-width:100%;" />
@@ -114,7 +114,7 @@ experiences:
             <img src="center_img/labsafety2.png" style="max-width:100%;" />
             <p><p/>
             <img src="center_img/labsafety3.png" style="max-width:100%;" />
-          - <p style="font-weight:bold;">부산대학교 연구장비공동활용지원센터</p>
+          - <p style="font-weight:bold;">부산대학교 연구장비공동활용지원센터 <a href="https://ccrf.pusan.ac.kr" target="_blank" style="color: #97AAC3;">바로가기</a></p>
             <p style="color: #97AAC3;">개발 내용 : 전자결재, 근태관리, 스케줄 관리, 자산 관리, 전자 게시판</p>
             <p style="color: #97AAC3;">개발 환경 : Windows Server 2012, IIS 8, Asp.Net 4.5, SQL Server 2012</p>
             <img src="center_img/ccrf1.png" style="max-width:100%;" />
@@ -122,7 +122,7 @@ experiences:
             <img src="center_img/ccrf2.png" style="max-width:100%;" />
             <p><p/>
             <img src="center_img/ccrf3.png" style="max-width:100%;" />
-          - <p style="font-weight:bold;">경남과학기술대학교 실험실 안전관리시스템</p>
+          - <p style="font-weight:bold;">경남과학기술대학교 실험실 안전관리시스템 <a href="http://safe.gntech.ac.kr" target="_blank" style="color: #97AAC3;">바로가기</a></p>
             <p style="color: #97AAC3;">개발 내용 : 전자결재, 근태관리, 스케줄 관리, 자산 관리, 전자 게시판</p>
             <p style="color: #97AAC3;">개발 환경 : Windows Server 2012, IIS 8, Asp.Net MVC 5, SQL Server 2012</p>
             <img src="center_img/safe1.png" style="max-width:100%;" />
