@@ -66,6 +66,7 @@ experiences:
           - <p style="font-weight:bold;">그룹웨어</p>
             <p style="color: #97AAC3;">개발 내용 : 전자결재, 근태관리, 스케줄 관리, 자산 관리, 전자 게시판</p>
             <p style="color: #97AAC3;">개발 환경 : Linux CentOS 5, Apache 2.4, PHP 5.6, MySql 5.3, JQuery 1.9.1</p>
+            <img src="gw_img/main.PNG" style="max-width:100%;" />
           - <p style="font-weight:bold;">공정관리 시스템</p>
             <p style="color: #97AAC3;">개발 내용 : 데이터 관리, 스케줄 관리, 퍼블리싱/컨펌 관리</p>
             <p style="color: #97AAC3;">개발 환경 : Linux CentOS 6, Apache 2.4, PHP 5.6, MySql 5.5, JQuery 1.9.1, Python 2.7, PyQT 4</p>
