@@ -134,10 +134,24 @@ experiences:
       time: 2012.03 - 2013.02
       company: AzWorks, 부산
       details: |
-        Openfire, Spark 연동 사내 매신저 및 southpaw 사의 TACTIC 오픈소스를 활용한 Task 매니저를 개발을 위한 연구를 하였습니다.
+        사내 매신저 및 Task 매니저를 개발을 위한 연구를 하였습니다.
 
-          - Bullet point
-          - Bullet point
+          - <p style="font-weight:bold;">사내 매신저 RnD </p>
+            <p style="color: #97AAC3;">개발 내용 : XMPP 프로토콜을 사용하는 Openfire와 Spark 오픈소스를 활용하여 사내 매신저 개발</p>
+            <p style="color: #97AAC3;">개발 환경 : Linux CentOS 5, Apache 2.4, MySql 5.3, Java 8</p>
+            <img src="az_img/openfire.png" style="max-width:100%;" />
+            <p>이미지 출처: https://medium.com/viithiisys/basic-nodejs-chat-app-for-openfire-using-strophe-js-as-client-library-ea9cfc29c089</p>
+            <p><p/>
+            <img src="az_img/spark.png" style="max-width:100%;" />
+            <p>이미지 출처: https://docs.bitnami.com/bch/apps/openfire/administration/connect-client</p>
+          - <p style="font-weight:bold;">Task 매니저 RnD </p>
+            <p style="color: #97AAC3;">개발 내용 : southpaw 사의 TACTIC 오픈소스를 활용한 Task 매니저 개발</p>
+            <p style="color: #97AAC3;">개발 환경 : Linux CentOS 5, Apache 2.4, MySql 5.3, Java 8, Python 2.7</p>
+            <img src="center_img/labcenter1.png" style="max-width:100%;" />
+            <p><p/>
+            <img src="center_img/labcenter2.png" style="max-width:100%;" />
+            <p><p/>
+            <img src="center_img/labcenter3.png" style="max-width:100%;" />
 
 projects:
     title: Projects
