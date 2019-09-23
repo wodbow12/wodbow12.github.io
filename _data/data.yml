@@ -46,7 +46,7 @@ sidebar:
 
 career-profile:
     title: Career Profile
-    summary: |
+    summary: >
       PHP, ASP.NET, PYTHON, Java Script(JQuery), MSSql, MySql, Maria-DB 등 다양한 언어로 홍보 홈페이지, 자원관리 홈페이지, 공정관리 홈페이지 등을 개발해온 저는,
       오픈소스 솔루션(gnuboard, youngcart, Cgi Mall, godo Mall)을 활용한 쇼핑몰 개발 및 관리 페이지를 제작 및 운영 경험이 많으며, 기획부터 개발 및 운영에 이르는 전반적인 업무를 소화할 수 있습니다.
 
@@ -55,7 +55,7 @@ education:
     - degree: 컴퓨터응용과학부 컴퓨터시뮬레이션학과
       university: 인제대학교 김해캠퍼스
       time: 2005 - 2012
-      details: |
+      details: >
         C, C++, MVC, Action Script, Flex, Java, Oracle 등 다양한 언어의 
         기초적인 문법 및 알고리즘에 대해 배웠습니다.
      #   Describe your study here lorem ipsum dolor sit amet, consectetuer
