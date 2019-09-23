@@ -48,30 +48,17 @@ education:
     - degree: 컴퓨터응용과학부 컴퓨터시뮬레이션학과
       university: 인제대학교 김해캠퍼스
       time: 2005 - 2012
-      details: |
-        C, C++, MVC, Action Script, Flex, Java, Oracle 등 다양한 언어의 
-        기초적인 문법 및 알고리즘에 대해 배웠습니다.
+     # details: |
+     #   C, C++, MVC, Action Script, Flex, Java, Oracle 등 다양한 언어의 
+     #   기초적인 문법 및 알고리즘에 대해 배웠습니다.
      #   Describe your study here lorem ipsum dolor sit amet, consectetuer
      #   adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
      #   sociis natoque penatibus et magnis dis parturient montes, nascetur
      #   ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
      #   pretium quis, sem.
 
-        - Bullet point
-        - Bullet point
-
-    - degree: BSc in Applied Mathematics
-      university: Bristol University
-      time: 2007 - 2011
-      details: |
-        Describe your study here lorem ipsum dolor sit amet, consectetuer
-        adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
-        sociis natoque penatibus et magnis dis parturient montes, nascetur
-        ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-        pretium quis, sem.
-
-          - Bullet point
-          - Bullet point
+     #   - Bullet point
+     #   - Bullet point
 
 experiences:
     - role: TD팀 | 웹 개발 대리 (연구원)
