@@ -65,16 +65,16 @@ experiences:
           <div class="flexslider">
              <ul class="slides">
                 <li>
-	      <a href="#">
-                      <img src="gw_img/main.PNG">
-                      <p class="flex-caption">main</p>
-                   </a>
+                      <a href="#">
+                            <img src="gw_img/main.PNG">
+                            <p class="flex-caption">main</p>
+                      </a>
                 </li>
                 <li>
-	      <a href="#">
-	         <img src="gw_img/sub3.PNG">
-	         <p class="flex-caption">sub3</p>
-	      </a>
+                      <a href="#">
+	               <img src="gw_img/sub3.PNG">
+	               <p class="flex-caption">sub3</p>
+	         </a>
 	    </li>
               </ul>
             </div>    	
