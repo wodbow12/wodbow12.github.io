@@ -1,49 +1,29 @@
 {
-  "name": "jssor-slider",
-  "version": "27.5.0",
-  "description": "touch swipe image slider/slideshow/gallery/carousel/banner mobile responsive bootstrap",
-  "main": "js/jssor.slider.min.js",
-  "homepage": "https://www.jssor.com",
+  "name": "flexslider",
+  "version": "2.7.2",
+  "description": "An awesome, fully responsive jQuery slider toolkit.",
+  "main": "jquery.flexslider.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jssor/slider.git"
+    "url": "git+https://github.com/woothemes/FlexSlider.git"
   },
   "keywords": [
-    "javascript",
+    "flexslider",
+    "jquery",
     "slider",
-    "carousel",
-    "slideshow",
-    "gallery",
-    "html5 ad",
-    "banner",
-    "photo",
-    "image",
-    "picture",
-    "content",
-    "text",
-    "js",
-    "mobile",
-    "responsive",
-    "front-end",
-    "touch",
-    "swipe",
-    "web",
-    "website",
-    "web page"
+    "woocommerce",
+    "automattic"
   ],
-  "author": "jssor",
-  "license": "MIT",
+  "author": "Automattic <jeff@woothemes.com>",
+  "license": "GPL-2.0",
   "bugs": {
-    "url": "https://github.com/jssor/slider/issues"
+    "url": "https://github.com/woocommerce/FlexSlider/issues"
   },
-  "files": [
-    "js/jssor.slider.min.js",
-    "skin/",
-    "svg/",
-    "README.md",
-    "bower.json",
-    "component.json",
-    "package.json",
-    "LICENSE"
-  ]
+  "homepage": "https://github.com/woocommerce/FlexSlider#readme",
+  "dependencies": {
+    "jquery": ">=1.11.3"
+  }
 }

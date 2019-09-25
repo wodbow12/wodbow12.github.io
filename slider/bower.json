@@ -1,46 +1,32 @@
 {
-    "name": "jssor-slider",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/jssor/slider.git"
-    },
-    "description": "touch swipe image slider/slideshow/gallery/carousel/banner mobile responsive bootstrap",
-    "version": "27.5.0",
-    "homepage": "https://www.jssor.com",
-    "keywords": [
-        "javascript",
-        "slider",
-        "carousel",
-        "slideshow",
-        "gallery",
-        "html5 ad",
-        "banner",
-        "photo",
-        "image",
-        "picture",
-        "content",
-        "text",
-        "js",
-        "mobile",
-        "responsive",
-        "front-end",
-        "touch",
-        "swipe",
-        "web",
-        "website",
-        "web page"
-    ],
-    "license": ["MIT"],
-    "main": [
-        "js/jssor.slider.min.js"
-    ],
-    "ignore": [
-        "demos/",
-        "examples/",
-        "transitions/",
-
-        "img/"
-    ],
-    "dependencies": {
-    }
+  "name": "flexslider",
+  "version": "2.7.2",
+  "homepage": "https://github.com/woocommerce/FlexSlider",
+  "authors": [
+    "Automattic <jeff@woothemes.com>"
+  ],
+  "description": "An awesome, fully responsive jQuery slider toolkit.",
+  "main": [
+    "jquery.flexslider.js",
+    "flexslider.css"
+  ],
+  "keywords": [
+    "flexslider",
+    "jquery",
+    "slider",
+    "woothemes",
+    "automattic"
+  ],
+  "license": "GPLv2 and later",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "demo"
+  ],
+  "dependencies": {
+    "jquery": ">=1.11.3"
+  }
 }
