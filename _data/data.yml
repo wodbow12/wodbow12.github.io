@@ -63,21 +63,21 @@ experiences:
       details: |
        그룹웨어, 공정관리 시스템(in-house tool, 정부지원사업), Shotgun Software의 3rd party app 개발을 PHP와 Python을 이용하여 개발하였습니다.
        <div class="flexslider">
-		<ul class="slides">
-	  		<li>
-	  		     <a href="#">
-		    		<img src="gw_img/main.PNG">
-		    		<p class="flex-caption">main</p>
-		    	     </a>
-	 		</li>
-	  		<li>
-	  		     <a href="#">
-		    		<img src="gw_img/sub3.PNG">
-		    		<p class="flex-caption">sub3</p>
-		    	     </a>
-	 		</li>
-		</ul>
-	</div>    	
+          <ul class="slides">
+             <li>
+	   <a href="#">
+                   <img src="gw_img/main.PNG">
+                      <p class="flex-caption">main</p>
+                </a>
+             </li>
+             <li>
+	   <a href="#">
+	      <img src="gw_img/sub3.PNG">
+	         <p class="flex-caption">sub3</p>
+	   </a>
+	 </li>
+           </ul>
+      </div>    	
           - <p style="font-weight:bold;">그룹웨어</p>
             <p style="color: #97AAC3;">개발 내용 : 전자결재, 근태관리, 스케줄 관리, 자산 관리, 전자 게시판</p>
             <p style="color: #97AAC3;">개발 환경 : Linux CentOS 5, Apache 2.4, PHP 5.6, MySql 5.3, JQuery 1.9.1</p>
