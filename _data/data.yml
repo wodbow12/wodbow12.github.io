@@ -72,10 +72,10 @@ experiences:
                 </li>
                 <li>
                       <a href="#">
-	               <img src="gw_img/sub3.PNG">
-	               <p class="flex-caption">sub3</p>
-	         </a>
-	    </li>
+                            <img src="gw_img/sub3.PNG">
+                            <p class="flex-caption">sub3</p>
+                      </a>
+                 </li>
               </ul>
             </div>    	
           - <p style="font-weight:bold;">그룹웨어</p>
