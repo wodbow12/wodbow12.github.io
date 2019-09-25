@@ -135,27 +135,27 @@ experiences:
             <p style="color: #97AAC3;">개발 내용 : SSL 적용, 커뮤니티 게시판 개발, 기기 이용 신청 기능 개선 및 사이트 유지보수</p>
             <p style="color: #97AAC3;">개발 환경 : Windows Server 2008, IIS 7, Asp.Net 3.5, SQL Server 2008 R2</p>
             <div class="flexslider _flexslider3">
-             <ul class="slides">
-                <li>
-                   <a href="#">
-                      <img src="center_img/labcenter1.png">
-                      <p class="flex-caption">메인 화면</p>
-                   </a>
-                 </li>
-                 <li>
-                    <a href="#">
-                       <img src="center_img/labcenter2.png">
-                       <p class="flex-caption">전자결재 - 결재문서작성 화면</p>
-                    </a>
-                 </li>
-                 <li>
-                    <a href="#">
-                       <img src="center_img/labcenter3.png">
-                          <p class="flex-caption">일정관리 화면</p>
-                    </a>
+               <ul class="slides">
+                  <li>
+                     <a href="#">
+                        <img src="center_img/labcenter1.png">
+                        <p class="flex-caption">메인 화면</p>
+                     </a>
                   </li>
+                  <li>
+                     <a href="#">
+                        <img src="center_img/labcenter2.png">
+                        <p class="flex-caption">전자결재 - 결재문서작성 화면</p>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#">
+                        <img src="center_img/labcenter3.png">
+                        <p class="flex-caption">일정관리 화면</p>
+                     </a>
+                   </li>
                 </ul>
-           </div>
+            </div>
 
           - <p style="font-weight:bold;">창원대학교 공동실험실습관 <a href="https://centlab.changwon.ac.kr" target="_blank" style="color: #97AAC3;">바로가기</a></p>
             <p style="color: #97AAC3;">개발 내용 : SSL 적용, 고객센터 게시판 개발, 기기 이용 신청 기능 개선 및 사이트 유지보수</p>
