@@ -63,13 +63,6 @@ experiences:
       details: |
        그룹웨어, 공정관리 시스템(in-house tool, 정부지원사업), Shotgun Software의 3rd party app 개발을 PHP와 Python을 이용하여 개발하였습니다.
           
-           <script type="text/javascript">
-              $(window).load(function() {
-                    $('.flexslider').flexslider({
-                          animation: "slide"
-                     });
-              });
-          </script> 
           <div class="flexslider">
              <ul class="slides">
                 <li>
