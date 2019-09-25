@@ -238,7 +238,7 @@ experiences:
           - <p style="font-weight:bold;">경남과학기술대학교 실험실 안전관리시스템 <a href="http://safe.gntech.ac.kr" target="_blank" style="color: #97AAC3;">바로가기</a></p>
             <p style="color: #97AAC3;">개발 내용 : 비동기식 게시판 호출 개발, MSDS API 적용, 사이버 안전교육 개발, 연구실 관리 개발 및 사이트 유지보수</p>
             <p style="color: #97AAC3;">개발 환경 : Windows Server 2012, IIS 8, Asp.Net MVC 5, SQL Server 2012</p>
-            <div class="flexslider _flexslider6">
+            <div class="flexslider _flexslider7">
                <ul class="slides">
                   <li>
                      <a href="#">
