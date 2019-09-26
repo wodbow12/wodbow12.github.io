@@ -172,13 +172,13 @@ experiences:
                   <li>
                      <a href="#">
                         <img src="center_img/labcenter2.png">
-                        <p class="flex-caption">전자결재 - 결재문서작성 화면</p>
+                        <p class="flex-caption">공지사항 화면</p>
                      </a>
                   </li>
                   <li>
                      <a href="#">
                         <img src="center_img/labcenter3.png">
-                        <p class="flex-caption">일정관리 화면</p>
+                        <p class="flex-caption">사이트맵 화면</p>
                      </a>
                    </li>
                 </ul>
@@ -198,13 +198,13 @@ experiences:
                   <li>
                      <a href="#">
                         <img src="center_img/centlab2.png">
-                        <p class="flex-caption">전자결재 - 결재문서작성 화면</p>
+                        <p class="flex-caption">공지사항 화면</p>
                      </a>
                   </li>
                   <li>
                      <a href="#">
                         <img src="center_img/centlab3.png">
-                        <p class="flex-caption">일정관리 화면</p>
+                        <p class="flex-caption">자료실 화면</p>
                      </a>
                    </li>
                 </ul>
@@ -224,13 +224,13 @@ experiences:
                   <li>
                      <a href="#">
                         <img src="center_img/labsafety2.png">
-                        <p class="flex-caption">전자결재 - 결재문서작성 화면</p>
+                        <p class="flex-caption">MSDS 검색 화면</p>
                      </a>
                   </li>
                   <li>
                      <a href="#">
                         <img src="center_img/labsafety3.png">
-                        <p class="flex-caption">일정관리 화면</p>
+                        <p class="flex-caption">안전교육 안내 화면</p>
                      </a>
                    </li>
                </ul>
@@ -250,13 +250,13 @@ experiences:
                   <li>
                      <a href="#">
                         <img src="center_img/ccrf2.png">
-                        <p class="flex-caption">전자결재 - 결재문서작성 화면</p>
+                        <p class="flex-caption">예약현황 화면</p>
                      </a>
                   </li>
                   <li>
                      <a href="#">
                         <img src="center_img/ccrf3.png">
-                        <p class="flex-caption">일정관리 화면</p>
+                        <p class="flex-caption">공지사항 화면</p>
                      </a>
                    </li>
                </ul>
@@ -276,13 +276,13 @@ experiences:
                   <li>
                      <a href="#">
                         <img src="center_img/safe2.png">
-                        <p class="flex-caption">전자결재 - 결재문서작성 화면</p>
+                        <p class="flex-caption">안전교육 안내 화면</p>
                      </a>
                   </li>
                   <li>
                      <a href="#">
                         <img src="center_img/safe3.png">
-                        <p class="flex-caption">일정관리 화면</p>
+                        <p class="flex-caption">MSDS 검색 화면</p>
                      </a>
                    </li>
                </ul>
@@ -295,25 +295,25 @@ experiences:
                   <li>
                      <a href="#">
                         <img src="msds_img/msds-1.png">
-                        <p class="flex-caption">메인 화면</p>
+                        <p class="flex-caption">MSDS 검색 화면</p>
                      </a>
                   </li>
                   <li>
                      <a href="#">
-                        <img src="msds_img/msds-1.png">
-                        <p class="flex-caption">전자결재 - 결재문서작성 화면</p>
+                        <img src="msds_img/msds-2.png">
+                        <p class="flex-caption">MSDS 검색 결과 화면</p>
                      </a>
                   </li>
                   <li>
                      <a href="#">
-                        <img src="msds_img/msds-1.png">
-                        <p class="flex-caption">일정관리 화면</p>
+                        <img src="msds_img/msds-3.png">
+                        <p class="flex-caption">MSDS 상세 화면 1</p>
                      </a>
                    </li>
                   <li>
                      <a href="#">
                         <img src="msds_img/msds-4.png">
-                        <p class="flex-caption">일정관리 화면</p>
+                        <p class="flex-caption">MSDS 상세 화면 2</p>
                      </a>
                    </li>
                </ul>
