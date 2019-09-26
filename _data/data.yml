@@ -87,7 +87,7 @@ experiences:
                       </a>
                  </li>
               </ul>
-          </div>    	
+          </div>
           
         - <p style="font-weight:bold;">공정관리 시스템</p>
           <p style="color: #97AAC3;">개발 내용 : 데이터 관리, 스케줄 관리, 퍼블리싱/컨펌 관리</p>
@@ -124,7 +124,28 @@ experiences:
         - <p style="font-weight:bold;">Shotgun 3rd Party App</p>
           <p style="color: #97AAC3;">개발 내용 : 퍼블리싱/컨펌 관리, Shot/Asset 자동 등록, 동영상 컨버팅</p>
           <p style="color: #97AAC3;">개발 환경 : Linux CentOS 6, Python 2.7</p>
-
+          <div class="flexslider _flexslider1">
+             <ul class="slides">
+                <li>
+                      <a href="#">
+                            <img src="shotgun_img/shotgun-1.png">
+                            <p class="flex-caption">Shotgun 개발자 Document</p>
+                      </a>
+                </li>
+                <li>
+                      <a href="#">
+                            <img src="shotgun_img/shotgun-2.png">
+                            <p class="flex-caption">Shotgun Event Source</p>
+                      </a>
+                 </li>
+                 <li>
+                      <a href="#">
+                            <img src="shotgun_img/shotgun-3.png">
+                            <p class="flex-caption">Shotgun Rest API</p>
+                      </a>
+                 </li>
+              </ul>
+          </div>
     - role: 웹 개발팀 | 웹 개발 사원 (연구원)
       time: 2013.04 - 2015.07
       company: 케이트, 부산
