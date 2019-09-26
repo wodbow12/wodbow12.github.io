@@ -144,6 +144,12 @@ experiences:
                             <p class="flex-caption">Shotgun Rest API</p>
                       </a>
                  </li>
+                 <li>
+                      <a href="#">
+                            <img src="shotgun_img/shotgun-4.png">
+                            <p class="flex-caption">Shotgun PostMan Rest API Test</p>
+                      </a>
+                 </li>
               </ul>
           </div>
     - role: 웹 개발팀 | 웹 개발 사원 (연구원)
