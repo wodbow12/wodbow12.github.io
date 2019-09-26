@@ -332,14 +332,37 @@ experiences:
             <p><p/>
             <img src="az_img/spark.png" style="max-width:100%;" />
             <p>이미지 출처: https://docs.bitnami.com/bch/apps/openfire/administration/connect-client</p>
-          - <p style="font-weight:bold;">Task 매니저 RnD </p>
+          - <p style="font-weight:bold;">Task 매니저 RnD <a href="https://github.com/Southpaw-TACTIC/TACTIC/tree/4.6/src" target="_blank" style="color: #97AAC3;">바로가기</a></p>
             <p style="color: #97AAC3;">개발 내용 : southpaw 사의 TACTIC 오픈소스를 활용한 Task 매니저 개발</p>
             <p style="color: #97AAC3;">개발 환경 : Linux CentOS 5, Apache 2.4, MySql 5.3, Java 8, Python 2.7</p>
-            <img src="center_img/labcenter1.png" style="max-width:100%;" />
-            <p><p/>
-            <img src="center_img/labcenter2.png" style="max-width:100%;" />
-            <p><p/>
-            <img src="center_img/labcenter3.png" style="max-width:100%;" />
+            <div class="flexslider _flexslider9">
+               <ul class="slides">
+                  <li>
+                     <a href="#">
+                        <img src="tactic_img/tactic-0.png">
+                        <p class="flex-caption">tactic Hello World 출력 화면</p>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#">
+                        <img src="tactic_img/tactic-1.png">
+                        <p class="flex-caption">Tactic Layout Text 출력 화면</p>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#">
+                        <img src="tactic_img/tactic-2.png">
+                        <p class="flex-caption">Tactic Asset Library DatePicker 적용 화면</p>
+                     </a>
+                   </li>
+                  <li>
+                     <a href="#">
+                        <img src="msds_img/msds-4.png">
+                        <p class="flex-caption">MSDS 상세 화면 2</p>
+                     </a>
+                   </li>
+               </ul>
+            </div>
 
 projects:
     title: Projects
