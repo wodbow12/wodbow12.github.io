@@ -124,7 +124,7 @@ experiences:
         - <p style="font-weight:bold;">Shotgun 3rd Party App</p>
           <p style="color: #97AAC3;">개발 내용 : 퍼블리싱/컨펌 관리, Shot/Asset 자동 등록, 동영상 컨버팅</p>
           <p style="color: #97AAC3;">개발 환경 : Linux CentOS 6, Python 2.7</p>
-          <div class="flexslider _flexslider1">
+          <div class="flexslider _flexslider8">
              <ul class="slides">
                 <li>
                       <a href="#">
@@ -281,7 +281,37 @@ experiences:
                    </li>
                </ul>
             </div>
-
+          - <p style="font-weight:bold;">MSDS API 적용 및 활용 <a href="https://www.data.go.kr/dataset/15001197/openapi.do" target="_blank" style="color: #97AAC3;">바로가기</a></p>
+            <p style="color: #97AAC3;">개발 내용 : 공공데이터포털에서 제공해주는 물질안전보건자료 MSDS API 적용</p>
+            <p style="color: #97AAC3;">개발 환경 : Windows Server 2012, IIS 8, Asp.Net MVC 5, SQL Server 2012</p>
+            <div class="flexslider _flexslider9">
+               <ul class="slides">
+                  <li>
+                     <a href="#">
+                        <img src="msds_img/msds-1.png">
+                        <p class="flex-caption">메인 화면</p>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#">
+                        <img src="msds_img/msds-1.png">
+                        <p class="flex-caption">전자결재 - 결재문서작성 화면</p>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#">
+                        <img src="msds_img/msds-1.png">
+                        <p class="flex-caption">일정관리 화면</p>
+                     </a>
+                   </li>
+                  <li>
+                     <a href="#">
+                        <img src="msds_img/msds-4.png">
+                        <p class="flex-caption">일정관리 화면</p>
+                     </a>
+                   </li>
+               </ul>
+            </div>
     - role: TD/RnD팀 | 사원
       time: 2012.03 - 2013.02
       company: AzWorks, 부산
