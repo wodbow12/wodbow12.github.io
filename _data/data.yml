@@ -373,28 +373,7 @@ experiences:
 projects:
     title: Projects
     intro: >
-               <div class="flexslider _flexslider">
-               <ul class="slides">
-                  <li>
-                     <a href="#">
-                        <img src="vola_img/vola-0.png">
-                        <p class="flex-caption">tactic Hello World 출력 화면</p>
-                     </a>
-                  </li>
-                  <li>
-                     <a href="#">
-                        <img src="vola_img/vola-1.png">
-                        <p class="flex-caption">Tactic Layout Text 출력 화면</p>
-                     </a>
-                  </li>
-                  <li>
-                     <a href="#">
-                        <img src="vola_img/vola-2.png">
-                        <p class="flex-caption">Tactic DatePicker 적용 화면</p>
-                     </a>
-                   </li>
-               </ul>
-            </div>   
+   
 
     assignments:
       - title: Vo.La
