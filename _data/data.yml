@@ -378,28 +378,7 @@ projects:
     assignments:
       - title: Vo.La
         link: "https://vo.la/"
-        tagline: "Iamport 결제 시스템 연동, 네이버 간편 로그인 연동, 상용화된 Short URL 시스템의 테마 개발, Rest API 개발 및 DB 속도 개선을 위한 구조 및 기능 변경                <div class="flexslider _flexslider">
-               <ul class="slides">
-                  <li>
-                     <a href="#">
-                        <img src="vola_img/vola-0.png">
-                        <p class="flex-caption">tactic Hello World 출력 화면</p>
-                     </a>
-                  </li>
-                  <li>
-                     <a href="#">
-                        <img src="vola_img/vola-1.png">
-                        <p class="flex-caption">Tactic Layout Text 출력 화면</p>
-                     </a>
-                  </li>
-                  <li>
-                     <a href="#">
-                        <img src="vola_img/vola-2.png">
-                        <p class="flex-caption">Tactic DatePicker 적용 화면</p>
-                     </a>
-                   </li>
-               </ul>
-            </div>"
+        tagline: "Iamport 결제 시스템 연동, 네이버 간편 로그인 연동, 상용화된 Short URL 시스템의 테마 개발, Rest API 개발 및 DB 속도 개선을 위한 구조 및 기능 변경"
 
 
 
