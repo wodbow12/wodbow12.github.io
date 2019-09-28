@@ -57,6 +57,38 @@ education:
      #   - Bullet point
 
 experiences:
+    - role: 프리랜서 개발자
+      time: 2019.04 - 2019.05
+      company: 프리랜서, 부산
+      details: |
+       Iamport 결제 시스템 연동, 네이버 간편 로그인 연동, 상용화된 Short URL 시스템의 테마 개발, Rest API 개발 및 DB 속도 개선을 위한 구조 및 기능 변경을 하였습니다.
+          
+        - <p style="font-weight:bold;">Short URL 시스템</p>
+          <p style="color: #97AAC3;">개발 내용 : 외부 결제 시스템 연동, 네이버 간편 로그인 연동, 테마 개발, Rest API 개발, DB 속도 개선 </p>
+          <p style="color: #97AAC3;">개발 환경 : Linux CentOS 7, PHP 7.2, Maria-DB 10.1</p>
+          <div class="flexslider _flexslider">
+             <ul class="slides">
+                <li>
+                     <a href="#">
+                        <img src="vola_img/vola-0.png">
+                        <p class="flex-caption">tactic Hello World 출력 화면</p>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#">
+                        <img src="vola_img/vola-1.png">
+                        <p class="flex-caption">Tactic Layout Text 출력 화면</p>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#">
+                        <img src="vola_img/vola-2.png">
+                        <p class="flex-caption">Tactic DatePicker 적용 화면</p>
+                     </a>
+                 </li>
+              </ul>
+          </div>
+
     - role: TD팀 | 웹 개발 대리 (연구원)
       time: 2015.08 - 2019.03
       company: 4TH CREATIVE PARTY, 부산
@@ -369,19 +401,6 @@ experiences:
                    </li>
                </ul>
             </div>
-
-projects:
-    title: Projects
-    intro: >
-   
-
-    assignments:
-      - title: Vo.La
-        link: "https://vo.la/"
-        tagline: "Iamport 결제 시스템 연동, 네이버 간편 로그인 연동, 상용화된 Short URL 시스템의 테마 개발, Rest API 개발 및 DB 속도 개선을 위한 구조 및 기능 변경"
-
-
-
 
 skills:
     title: Skills &amp; Proficiency
