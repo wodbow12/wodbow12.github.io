@@ -373,13 +373,7 @@ experiences:
 projects:
     title: Projects
     intro: >
-      
-
-    assignments:
-      - title: Vo.La
-        link: "https://vo.la/"
-        tagline: "Iamport 결제 시스템 연동, 네이버 간편 로그인 연동, 상용화된 Short URL 시스템의 테마 개발, Rest API 개발 및 DB 속도 개선을 위한 구조 및 기능 변경"
-            <div class="flexslider _flexslider">
+               <div class="flexslider _flexslider">
                <ul class="slides">
                   <li>
                      <a href="#">
@@ -400,7 +394,13 @@ projects:
                      </a>
                    </li>
                </ul>
-            </div>
+            </div>   
+
+    assignments:
+      - title: Vo.La
+        link: "https://vo.la/"
+        tagline: "Iamport 결제 시스템 연동, 네이버 간편 로그인 연동, 상용화된 Short URL 시스템의 테마 개발, Rest API 개발 및 DB 속도 개선을 위한 구조 및 기능 변경"
+
 
 
 
