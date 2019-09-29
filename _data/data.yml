@@ -71,31 +71,31 @@ experiences:
                 <li>
                      <a href="#">
                         <img src="vola_img/vola-0.png">
-                        <p class="flex-caption">tactic Hello World 출력 화면</p>
+                        <p class="flex-caption">메인 화면</p>
                      </a>
                   </li>
                   <li>
                      <a href="#">
                         <img src="vola_img/vola-1.png">
-                        <p class="flex-caption">Tactic Layout Text 출력 화면</p>
+                        <p class="flex-caption">관리자 화면</p>
                      </a>
                   </li>
                   <li>
                      <a href="#">
                         <img src="vola_img/vola-2.png">
-                        <p class="flex-caption">Tactic DatePicker 적용 화면</p>
+                        <p class="flex-caption">API Key 화면</p>
                      </a>
                  </li>
                   <li>
                      <a href="#">
                         <img src="vola_img/vola-3.png">
-                        <p class="flex-caption">Tactic DatePicker 적용 화면</p>
+                        <p class="flex-caption">API GET 화면</p>
                      </a>
                  </li>
                   <li>
                      <a href="#">
                         <img src="vola_img/vola-4.png">
-                        <p class="flex-caption">Tactic DatePicker 적용 화면</p>
+                        <p class="flex-caption">API DEL 화면</p>
                      </a>
                  </li>
               </ul>
