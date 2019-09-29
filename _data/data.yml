@@ -95,7 +95,7 @@ experiences:
                   <li>
                      <a href="#">
                         <img src="vola_img/vola-4.png">
-                        <p class="flex-caption">API DEL 화면</p>
+                        <p class="flex-caption">API DELETE 화면</p>
                      </a>
                  </li>
               </ul>
