@@ -66,7 +66,7 @@ experiences:
         - <p style="font-weight:bold;">Short URL 시스템</p>
           <p style="color: #97AAC3;">개발 내용 : 외부 결제 시스템 연동, 네이버 간편 로그인 연동, 테마 개발, Rest API 개발, DB 속도 개선 </p>
           <p style="color: #97AAC3;">개발 환경 : Linux CentOS 7, PHP 7.2, Maria-DB 10.1</p>
-          <div class="flexslider _flexslider">
+          <div class="flexslider _flexslider_1">
              <ul class="slides">
                 <li>
                      <a href="#">
@@ -110,7 +110,7 @@ experiences:
         - <p style="font-weight:bold;">그룹웨어</p>
           <p style="color: #97AAC3;">개발 내용 : 전자결재, 근태관리, 스케줄 관리, 자산 관리, 전자 게시판</p>
           <p style="color: #97AAC3;">개발 환경 : Linux CentOS 5, Apache 2.4, PHP 5.6, MySql 5.3, JQuery 1.9.1</p>
-          <div class="flexslider _flexslider">
+          <div class="flexslider _flexslider_2">
              <ul class="slides">
                 <li>
                       <a href="#">
@@ -136,7 +136,7 @@ experiences:
         - <p style="font-weight:bold;">공정관리 시스템</p>
           <p style="color: #97AAC3;">개발 내용 : 데이터 관리, 스케줄 관리, 퍼블리싱/컨펌 관리, RestAPI 개발</p>
           <p style="color: #97AAC3;">개발 환경 : Linux CentOS 6, Apache 2.4, PHP 5.6, MySql 5.5, JQuery 1.9.1, Python 2.7, PyQT 4</p>
-          <div class="flexslider _flexslider">
+          <div class="flexslider _flexslider_3">
              <ul class="slides">
                 <li>
                    <a href="#">
@@ -168,7 +168,7 @@ experiences:
         - <p style="font-weight:bold;">Shotgun 3rd Party App</p>
           <p style="color: #97AAC3;">개발 내용 : 퍼블리싱/컨펌 관리, Shot/Asset 자동 등록, 동영상 컨버팅</p>
           <p style="color: #97AAC3;">개발 환경 : Linux CentOS 6, Python 2.7</p>
-          <div class="flexslider _flexslider">
+          <div class="flexslider _flexslider_4">
              <ul class="slides">
                 <li>
                       <a href="#">
@@ -206,7 +206,7 @@ experiences:
           - <p style="font-weight:bold;">부산대학교 공동실험실습관 <a href="https://labcenter.pusan.ac.kr" target="_blank" style="color: #97AAC3;">바로가기</a></p>
             <p style="color: #97AAC3;">개발 내용 : SSL 적용, 커뮤니티 게시판 개발, 기기 이용 신청 기능 개선 및 사이트 유지보수</p>
             <p style="color: #97AAC3;">개발 환경 : Windows Server 2008, IIS 7, Asp.Net 3.5, SQL Server 2008 R2</p>
-            <div class="flexslider _flexslider">
+            <div class="flexslider _flexslider_5">
                <ul class="slides">
                   <li>
                      <a href="#">
@@ -232,7 +232,7 @@ experiences:
           - <p style="font-weight:bold;">창원대학교 공동실험실습관 <a href="https://centlab.changwon.ac.kr" target="_blank" style="color: #97AAC3;">바로가기</a></p>
             <p style="color: #97AAC3;">개발 내용 : SSL 적용, 고객센터 게시판 개발, 기기 이용 신청 기능 개선 및 사이트 유지보수</p>
             <p style="color: #97AAC3;">개발 환경 : Windows Server 2008, IIS 7, Asp.Net 3.5, SQL Server 2008 R2</p>
-            <div class="flexslider _flexslider">
+            <div class="flexslider _flexslider_6">
                <ul class="slides">
                   <li>
                      <a href="#">
@@ -258,7 +258,7 @@ experiences:
           - <p style="font-weight:bold;">창원대학교 실험실 안전관리시스템 <a href="http://labsafety.changwon.ac.kr" target="_blank" style="color: #97AAC3;">바로가기</a></p>
             <p style="color: #97AAC3;">개발 내용 : 비동기식 게시판 호출 개발, MSDS API 적용, 사이버 안전교육 개발, 연구실 관리 개발 및 사이트 유지보수 </p>
             <p style="color: #97AAC3;">개발 환경 : Windows Server 2012, IIS 8, Asp.Net MVC 5, SQL Server 2012</p>
-            <div class="flexslider _flexslider">
+            <div class="flexslider _flexslider_7">
                <ul class="slides">
                   <li>
                      <a href="#">
@@ -296,7 +296,7 @@ experiences:
           - <p style="font-weight:bold;">부산대학교 연구장비공동활용지원센터 <a href="https://ccrf.pusan.ac.kr" target="_blank" style="color: #97AAC3;">바로가기</a></p>
             <p style="color: #97AAC3;">개발 내용 : 전체 사이트 고도화, SSL 적용 및 사이트 유지보수</p>
             <p style="color: #97AAC3;">개발 환경 : Windows Server 2012, IIS 8, Asp.Net 4.5, SQL Server 2012</p>
-            <div class="flexslider _flexslider">
+            <div class="flexslider _flexslider_8">
                <ul class="slides">
                   <li>
                      <a href="#">
@@ -322,7 +322,7 @@ experiences:
           - <p style="font-weight:bold;">경남과학기술대학교 실험실 안전관리시스템 <a href="http://safe.gntech.ac.kr" target="_blank" style="color: #97AAC3;">바로가기</a></p>
             <p style="color: #97AAC3;">개발 내용 : 비동기식 게시판 호출 개발, MSDS API 적용, 사이버 안전교육 개발, 연구실 관리 개발 및 사이트 유지보수</p>
             <p style="color: #97AAC3;">개발 환경 : Windows Server 2012, IIS 8, Asp.Net MVC 5, SQL Server 2012</p>
-            <div class="flexslider _flexslider">
+            <div class="flexslider _flexslider_9">
                <ul class="slides">
                   <li>
                      <a href="#">
@@ -347,7 +347,7 @@ experiences:
           - <p style="font-weight:bold;">MSDS API 적용 및 활용 <a href="https://www.data.go.kr/dataset/15001197/openapi.do" target="_blank" style="color: #97AAC3;">바로가기</a></p>
             <p style="color: #97AAC3;">개발 내용 : 공공데이터포털에서 제공해주는 물질안전보건자료 MSDS API 적용</p>
             <p style="color: #97AAC3;">개발 환경 : Windows Server 2012, IIS 8, Asp.Net MVC 5, SQL Server 2012</p>
-            <div class="flexslider _flexslider">
+            <div class="flexslider _flexslider_10">
                <ul class="slides">
                   <li>
                      <a href="#">
@@ -385,7 +385,7 @@ experiences:
           - <p style="font-weight:bold;">사내 매신저 RnD </p>
             <p>개발 내용 : <span style="color: #97AAC3;">XMPP 프로토콜을 사용하는 Openfire와 Spark 오픈소스를 활용하여 사내 매신저 개발</span></p>
             <p>개발 환경 : <span style="color: #97AAC3;">Linux CentOS 5, Apache 2.4, MySql 5.3, Java 8</span></p>
-            <div class="flexslider _flexslider">
+            <div class="flexslider _flexslider_11">
                <ul class="slides">
                   <li>
                      <a href="#">
@@ -405,7 +405,7 @@ experiences:
           - <p style="font-weight:bold;">Task 매니저 RnD <a href="https://github.com/Southpaw-TACTIC/TACTIC/tree/4.6/src" target="_blank" style="color: #97AAC3;">바로가기</a></p>
             <p style="color: #97AAC3;">개발 내용 : southpaw 사의 TACTIC 오픈소스를 활용한 Task 매니저 개발</p>
             <p style="color: #97AAC3;">개발 환경 : Linux CentOS 5, Apache 2.4, MySql 5.3, Java 8, Python 2.7</p>
-            <div class="flexslider _flexslider">
+            <div class="flexslider _flexslider_12">
                <ul class="slides">
                   <li>
                      <a href="#">
