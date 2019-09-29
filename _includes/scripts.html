@@ -9,7 +9,7 @@
 <script type="text/javascript" src="{{site.baseurl}}/assets/js/jquery.flexslider.js"></script>
  
 <script type="text/javascript">
-      $(document).ready(function(){
+      $(window).load(function(){
             $('.flexslider').flexslider({
                   animation: "slide",
 	     slideshow: false,
@@ -17,7 +17,7 @@
                       console.log("test 1");
                   }
             });
-
+     });
 </script> 
 
 {% if site.analytics %}
