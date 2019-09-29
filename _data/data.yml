@@ -121,7 +121,7 @@ experiences:
                 <li>
                       <a href="#">
                             <img src="gw_img/sub3.PNG">
-                            <p class="flex-caption">3D 라이브러리 화면</p>
+                            <p class="flex-caption">전자결재 - 결재문서작성 화면</p>
                       </a>
                  </li>
                  <li>
@@ -147,13 +147,13 @@ experiences:
                  <li>
                     <a href="#">
                        <img src="pms_img/3D_Lib.png">
-                       <p class="flex-caption">전자결재 - 결재문서작성 화면</p>
+                       <p class="flex-caption">3D 라이브러리 화면</p>
                     </a>
                  </li>
                  <li>
                     <a href="#">
                        <img src="pms_img/Task.png">
-                          <p class="flex-caption">일정관리 화면</p>
+                          <p class="flex-caption">Task 관리 화면</p>
                     </a>
                   </li>
                      <li>
