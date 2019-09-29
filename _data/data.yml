@@ -278,6 +278,18 @@ experiences:
                         <p class="flex-caption">안전교육 안내 화면</p>
                      </a>
                    </li>
+                  <li>
+                     <a href="#">
+                        <img src="center_img/labsafety4.png">
+                        <p class="flex-caption">연구실 관리 Layout 화면</p>
+                     </a>
+                   </li>
+                  <li>
+                     <a href="#">
+                        <img src="center_img/labsafety5.png">
+                        <p class="flex-caption">안전교육 화면</p>
+                     </a>
+                   </li>
                </ul>
             </div>
 
