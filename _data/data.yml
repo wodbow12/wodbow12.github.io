@@ -432,20 +432,23 @@ skills:
     title: Skills &amp; Proficiency
 
     toolset:
-      - name: PHP
-        level: 98%
+      - name: ASP.NET
+        level: 80%
         
-      - name: Javascript & jQuery
-        level: 98%
+      - name: PHP
+        level: 90%
+        
+      - name: React & Javascript & jQuery
+        level: 85%
 
       - name: HTML5 & CSS
-        level: 95%
+        level: 90%
 
       - name: Python & PyQT
-        level: 80%
-
-      - name: 문서 작성
         level: 60%
+
+      - name: NodeJS
+        level: 80%
 
 footer: 
     
