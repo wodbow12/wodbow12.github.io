@@ -2,17 +2,23 @@
 layout: default
 ---
 
+<header class="resume-header">
+  <div>
+    <h1>이동원</h1>
+    <p class="headline">AI Native Software Engineer · Full Stack Developer</p>
+  </div>
+  <div class="resume-contact">
+    <div><a href="mailto:wodbow12@gmail.com">wodbow12@gmail.com</a></div>
+    <div><a href="tel:01031267598">010 3126 7598</a></div>
+  </div>
+</header>
 
-{% include career-profile.html %}
-
-{% unless site.data.data.sidebar.education %}
-  {% include education.html %}
-{% endunless %}
+<div class="resume-intro">
+  <div class="eyebrow">Profile</div>
+  <div class="summary">{{ site.data.data.career-profile.summary | markdownify }}</div>
+</div>
 
 {% include experiences.html %}
-
 {% include projects.html %}
-
-{% include publications.html %}
-
 {% include skills.html %}
+{% include education.html %}
