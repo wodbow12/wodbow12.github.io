@@ -1,34 +1,19 @@
-#Update all the sections by editing the data.yml file inside _data folder.
-
 # Site Settings
-title: PORTFOLIO
-url: 'http://webjeda.com'
-baseurl: '' #change it according to your repository name
-description: Dongwon Lee's PORTFOLIO
-# Style will be applied only after restarting the build or serve. Just choose one of the options.
-theme_skin: ceramic # blue turquoise green berry orange ceramic
-chrome_mobile_color: #use hex colors (ex:#1976d2) or leave empty if you don't want a color for chrome mobile searchbar
-
-# Tracker
-analytics: UA-83979019-1
-
-
-
-# Sass/SCSS
+title: 이동원 | AI Native Software Engineer
+url: 'https://wodbow12.github.io'
+baseurl: ''
+description: Python, Node.js, React 기반 제품 개발과 RAG·LLM·업무 자동화를 만드는 이동원의 포트폴리오
+theme_skin: ceramic
+chrome_mobile_color: '#172a46'
 sass:
   sass_dir: _sass
-  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
-
-# Build settings
+  style: compressed
 compress-site: yes
-
 encoding: "utf-8"
-compress_html: # - http://jch.penibelst.de/
+compress_html:
   clippings: all
   ignore:
     envs: development
-
-# Development Settings
 port: 4000
 host: 0.0.0.0
 safe: false
