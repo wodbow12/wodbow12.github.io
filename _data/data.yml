@@ -1,454 +1,122 @@
-#
-# Be aware that even a small syntax error here can lead to failures in output.
-#
-
 sidebar:
-    about: False # set to False or comment line if you want to remove the "how to use?" in the sidebar
-    education: True # set to False if you want education in main section instead of in sidebar
-
-    # Profile information
-    name: 이 동원
-    tagline: Developer
-    avatar: dwlee2.png #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
-
-    # Sidebar links
+    about: False
+    education: False
+    name: 이동원
+    tagline: AI Native Software Engineer
+    avatar: dwlee2.png
     email: wodbow12@gmail.com
     phone: 010 3126 7598
-    website: hello-world.tistory.com #do not add http://
-    linkedin: 
+    website: hello-world.tistory.com
     github: wodbow12
-    gitlab:
-    bitbucket:
-    twitter: 
-    stack-overflow: # Number/Username, e.g. 123456/alandoe
-    codewars:
-    goodreads: # Number-Username, e.g. 123456-alandoe
-
     interests:
-      - item: 게임
-        link:
-
-      - item: 낚시
-        link:
-
-      - item: 세차
-        link:
+      - item: AI Native 개발
+      - item: RAG · LLM 시스템
+      - item: 제작 파이프라인 자동화
 
 career-profile:
-    title: Career Profile
+    title: About Me
     summary: |
-      PHP, ASP.NET, PYTHON, Java Script(JQuery), MSSql, MySql, Maria-DB 등 다양한 언어로 홍보 홈페이지, 자원관리 홈페이지, 공정관리 홈페이지 등을 개발해온 저는, 오픈소스 솔루션(gnuboard, youngcart, Cgi Mall, godo Mall)을 활용한 쇼핑몰 개발 및 관리 페이지 제작과 운영 경험이 있으며, 기획부터 개발 및 운영에 이르는 전반적인 업무를 소화할 수 있습니다.
+      Python·Node.js API와 React·TypeScript UI를 함께 만드는 13년차 소프트웨어 엔지니어입니다. 제작 현장의 반복 업무를 이해하고, 실제 사용자가 매일 쓰는 도구와 자동화 시스템으로 바꿔 왔습니다.
 
+      최근에는 Claude Code와 Codex를 개발 파트너로 활용해 요구사항 정리부터 설계, 구현, 테스트까지 이어지는 AI Native 개발 흐름을 만들고 있습니다. RAG 검색 품질 개선, 사내 AI 어시스턴트, n8n 기반 리서치 자동화, H200 GPU 기반 로컬 LLM 운영을 경험했습니다.
+
+      현업 담당자와 문제를 정의하고, 운영 피드백과 측정 가능한 결과를 제품에 반영하는 데 강점이 있습니다.
+
+experiences:
+    - role: AI 자동화 및 플랫폼 개발
+      time: 2025.01 - 2026.08
+      company: 슈퍼트리 스튜디오 · AI 플랫폼 / 자동화
+      details: |
+        제작 현장의 자료 검색과 반복 작업을 줄이는 내부 AI 도구와 자동화 워크플로를 기획·개발·운영했습니다.
+
+        - **사내 AI 어시스턴트와 시나리오 트레일러 플랫폼** — Next.js·React·TypeScript UI와 Python·Flask API를 연결하고, 작업 상태·대화 이력·SSE 스트리밍을 구현했습니다. ShotGrid API의 프로젝트·태스크 맥락을 검색 응답과 영상 제작 흐름에 연결했습니다.
+        - **RAG 검색 품질 개선** — PDF, Excel, Word, PowerPoint 파싱·청킹·임베딩을 구성하고 Milvus 검색과 Cross Encoder 재정렬을 적용했습니다. 문서/프로젝트/태스크 검색을 묶어 출처를 포함한 답변을 제공하고, 단계별 테스트와 평가 데이터를 정비했습니다.
+        - **비동기 미디어 생성** — Celery·Redis로 장시간 작업을 분리하고 ComfyUI 이미지 생성과 FFmpeg 후처리를 연결했습니다. 작업 상태 추적, 결과 전달, 실패 처리 흐름을 마련했습니다.
+        - **로컬 LLM 운영** — H200 GPU에서 vLLM 기반 추론을 운영하고 LM Studio 대안을 비교했습니다. OpenAI 호환 API와 스트리밍 응답을 적용하고, 요청·토큰·컨텍스트 사용량을 분석해 프롬프트와 호출 방식을 개선했습니다.
+        - **문서 파싱 최적화** — GPU 가속 PDF 이미지 추출에서 61쪽 문서를 72초에서 18초로 단축했습니다.
+        - **AI Native 개발 흐름** — Claude Code·Codex와 작업 컨텍스트, 단계별 계획, 검토·테스트 기준을 정리해 설계부터 검증까지 반복 가능한 개발 루틴을 운영했습니다.
+    - role: 소프트웨어 개발 및 제작 도구 자동화
+      time: 2023.02 - 2026.08
+      company: 슈퍼트리 스튜디오 · 제작 기술 / 자동화
+      details: |
+        VFX·게임 제작팀의 반복 작업을 자동화하고, 내부 도구를 안정적으로 배포·운영했습니다.
+
+        - Python과 ShotGrid API로 태스크 할당, 이벤트 감지, 작업 큐와 상태 알림을 자동화해 PM의 반복 확인 업무를 약 50% 줄였습니다.
+        - Maya·Nuke용 도구를 Python·PySide로 개발하고, 모델링·리깅·애니메이션·FX 등 5개 제작 파트의 파일 수집과 제출 검증을 표준화했습니다.
+        - TransNetV2 장면 분석과 EDL·OTIO·FCP7 XML 출력을 제공하는 미디어 분석 도구를 개발했습니다.
+        - GitHub Actions 기반 Windows 빌드·테스트·배포를 구성해 내부 도구의 릴리스 과정을 자동화했습니다.
+        - AI 코딩 도구를 활용하는 팀 개발 규칙과 검증 루틴을 문서화하고, 작업 맥락·안전한 변경·회귀 테스트를 일관되게 적용했습니다.
+    - role: 웹 애플리케이션 개발
+      time: 2022.06 - 2023.01
+      company: 플러그 · 웹 서비스
+      details: |
+        - PHP 기반 URL 단축 서비스를 React 프런트엔드로 전환했습니다.
+        - 관리·결제·주문·조회 화면을 개선하고 AWS EC2·S3 환경의 서비스를 운영했습니다.
+        - React, PHP, MySQL, AWS.
+    - role: 웹 서비스 개발 및 운영
+      time: 2020.01 - 2022.06
+      company: 한국전력공사 · 협력사 프로젝트
+      details: |
+        - 한전KPS·한수원·한전KDN 등 3개 고객사의 서비스와 업무 시스템을 개발·운영했습니다.
+        - 고객사별 통합 계정과 모바일 QR 조회 기능을 구현하고, Jenkins 기반 AWS EC2 배포를 운영했습니다.
+        - React, Node.js, MSSQL, AWS EC2, Jenkins.
+    - role: 웹 개발 · 제작 파이프라인
+      time: 2015.08 - 2019.03
+      company: 4TH CREATIVE PARTY · TD/R&D
+      details: |
+        - 그룹웨어, 공정 관리 시스템, ShotGrid 연동 도구를 PHP·Python으로 개발했습니다.
+        - 전자결재·근태·일정·자산 관리와 퍼블리싱/컨펌, Shot·Asset 자동 등록 및 미디어 변환을 지원했습니다.
+        - Python·PySide 도구로 Maya·Nuke 제작 과정을 자동화하고, 제작 파트별 파일 검증을 표준화했습니다.
+    - role: 웹 개발
+      time: 2012.03 - 2015.07
+      company: 케이트 · 아즈웍스
+      details: |
+        대학 공동실험실습관과 안전관리 시스템을 ASP.NET·MSSQL로 개발·운영하고, 사내 메신저와 업무 도구를 연구했습니다.
+
+projects:
+    title: Selected Projects
+    intro: 문제를 정의하고 실제 제작·운영 환경에 연결한 제품과 도구입니다.
+    assignments:
+      - title: 사내 AI 어시스턴트
+        link: https://github.com/wodbow12/sv_ai_agent_dev
+        tagline: ShotGrid 맥락을 연결한 문서 검색·업무 질의 응답 · Flask, Milvus, RAG, Cross Encoder
+      - title: 시나리오 트레일러 제작 플랫폼
+        link: https://github.com/wodbow12/sv_scenario_trailer
+        tagline: 시나리오 분석부터 영상 생성·후처리까지 잇는 비동기 제작 흐름 · Next.js, Celery, Redis, ComfyUI, FFmpeg
+      - title: Muse Studio
+        link: https://github.com/wodbow12/sv_muse_studio
+        tagline: 멀티모델 AI 콘텐츠 제작과 데스크톱 워크플로 · React, TypeScript, Electron, Fastify
+      - title: 동영상 분석 도구
+        link: https://github.com/wodbow12/sv_mov_player
+        tagline: 장면 분석, 편집 타임라인 출력, ShotGrid 연동 · Python, PySide6, TransNetV2
+      - title: AI 리서치 자동화
+        link: https://github.com/wodbow12/n8n_research
+        tagline: 뉴스 수집·중복 제거·요약·분류·배포 자동화 · n8n, Python, LLM
+      - title: GitHub
+        link: https://github.com/wodbow12
+        tagline: 오픈소스와 개인 프로젝트
+
+skills:
+    title: 기술
+    toolset:
+      - name: AI 제품 · RAG · Milvus · Cross Encoder
+        level: 90%
+      - name: Python · Flask · Celery · Redis
+        level: 90%
+      - name: TypeScript · React · Next.js · Node.js
+        level: 90%
+      - name: Claude Code · Codex · n8n · MCP
+        level: 85%
+      - name: vLLM · LM Studio · GPU 추론 운영
+        level: 80%
+      - name: Docker · AWS · Linux · CI/CD
+        level: 80%
+      - name: ShotGrid · Maya · Nuke · FFmpeg
+        level: 85%
+      - name: PostgreSQL · MSSQL · MySQL · SQLite
+        level: 80%
 
 education:
     - degree: 컴퓨터응용과학부 컴퓨터시뮬레이션학과
-      university: 인제대학교 김해캠퍼스
-      time: 2005 - 2012
-      details: |
-        C, C++, MVC, Action Script, Flex, Java, Oracle 등 다양한 언어의 
-        기초적인 문법 및 알고리즘에 대해 배웠습니다.
-     #   Describe your study here lorem ipsum dolor sit amet, consectetuer
-     #   adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
-     #   sociis natoque penatibus et magnis dis parturient montes, nascetur
-     #   ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-     #   pretium quis, sem.
-
-     #   - Bullet point
-     #   - Bullet point
-
-experiences:
-    - role: 프리랜서 개발자
-      time: 2019.04 - 2019.05
-      company: 프리랜서, 부산
-      details: |
-       Iamport 결제 시스템 연동, 네이버 간편 로그인 연동, 상용화된 Short URL 시스템의 테마 개발, Rest API 개발 및 DB 속도 개선을 위한 구조 및 기능 변경을 하였습니다.
-          
-        - <p style="font-weight:bold;">Short URL 시스템</p>
-          <p style="color: #97AAC3;">개발 내용 : 외부 결제 시스템 연동, 네이버 간편 로그인 연동, 테마 개발, Rest API 개발, DB 속도 개선 </p>
-          <p style="color: #97AAC3;">개발 환경 : Linux CentOS 7, PHP 7.2, Maria-DB 10.1</p>
-          <div class="flexslider _flexslider_1">
-             <ul class="slides">
-                <li>
-                     <a href="#">
-                        <img src="vola_img/vola-0.png">
-                        <p class="flex-caption">메인 화면</p>
-                     </a>
-                  </li>
-                  <li>
-                     <a href="#">
-                        <img src="vola_img/vola-1.png">
-                        <p class="flex-caption">관리자 화면</p>
-                     </a>
-                  </li>
-                  <li>
-                     <a href="#">
-                        <img src="vola_img/vola-2.png">
-                        <p class="flex-caption">API Key 화면</p>
-                     </a>
-                 </li>
-                  <li>
-                     <a href="#">
-                        <img src="vola_img/vola-3.png">
-                        <p class="flex-caption">API GET 화면</p>
-                     </a>
-                 </li>
-                  <li>
-                     <a href="#">
-                        <img src="vola_img/vola-4.png">
-                        <p class="flex-caption">API DELETE 화면</p>
-                     </a>
-                 </li>
-              </ul>
-          </div>
-
-    - role: TD팀 | 웹 개발 대리 (연구원)
-      time: 2015.08 - 2019.03
-      company: 4TH CREATIVE PARTY, 부산
-      details: |
-       그룹웨어, 공정관리 시스템(in-house tool, 정부지원사업), Shotgun Software의 3rd party app을 PHP와 Python을 이용하여 개발하였습니다.
-          
-        - <p style="font-weight:bold;">그룹웨어</p>
-          <p style="color: #97AAC3;">개발 내용 : 전자결재, 근태관리, 스케줄 관리, 자산 관리, 전자 게시판</p>
-          <p style="color: #97AAC3;">개발 환경 : Linux CentOS 5, Apache 2.4, PHP 5.6, MySql 5.3, JQuery 1.9.1</p>
-          <div class="flexslider _flexslider_2">
-             <ul class="slides">
-                <li>
-                      <a href="#">
-                            <img src="gw_img/main.PNG">
-                            <p class="flex-caption">메인 화면</p>
-                      </a>
-                </li>
-                <li>
-                      <a href="#">
-                            <img src="gw_img/sub3.PNG">
-                            <p class="flex-caption">전자결재 - 결재문서작성 화면</p>
-                      </a>
-                 </li>
-                 <li>
-                      <a href="#">
-                            <img src="gw_img/sub14.PNG">
-                            <p class="flex-caption">일정관리 화면</p>
-                      </a>
-                 </li>
-              </ul>
-          </div>
-          
-        - <p style="font-weight:bold;">공정관리 시스템</p>
-          <p style="color: #97AAC3;">개발 내용 : 데이터 관리, 스케줄 관리, 퍼블리싱/컨펌 관리, RestAPI 개발</p>
-          <p style="color: #97AAC3;">개발 환경 : Linux CentOS 6, Apache 2.4, PHP 5.6, MySql 5.5, JQuery 1.9.1, Python 2.7, PyQT 4</p>
-          <div class="flexslider _flexslider_3">
-             <ul class="slides">
-                <li>
-                   <a href="#">
-                      <img src="pms_img/Shot.png">
-                      <p class="flex-caption">메인 화면</p>
-                   </a>
-                 </li>
-                 <li>
-                    <a href="#">
-                       <img src="pms_img/3D_Lib.png">
-                       <p class="flex-caption">3D 라이브러리 화면</p>
-                    </a>
-                 </li>
-                 <li>
-                    <a href="#">
-                       <img src="pms_img/Task.png">
-                          <p class="flex-caption">Task 관리 화면</p>
-                    </a>
-                  </li>
-                     <li>
-                        <a href="#">
-                           <img src="pms_img/Schedule.png">
-                           <p class="flex-caption">일정관리 화면</p>
-                        </a>
-                     </li>
-                  </ul>
-           </div>            
-
-        - <p style="font-weight:bold;">Shotgun 3rd Party App</p>
-          <p style="color: #97AAC3;">개발 내용 : 퍼블리싱/컨펌 관리, Shot/Asset 자동 등록, 동영상 컨버팅</p>
-          <p style="color: #97AAC3;">개발 환경 : Linux CentOS 6, Python 2.7</p>
-          <div class="flexslider _flexslider_4">
-             <ul class="slides">
-                <li>
-                      <a href="#">
-                            <img src="shotgun_img/shotgun-1.png">
-                            <p class="flex-caption">Shotgun 개발자 Document</p>
-                      </a>
-                </li>
-                <li>
-                      <a href="#">
-                            <img src="shotgun_img/shotgun-2.png">
-                            <p class="flex-caption">Shotgun Event Source</p>
-                      </a>
-                 </li>
-                 <li>
-                      <a href="#">
-                            <img src="shotgun_img/shotgun-3.png">
-                            <p class="flex-caption">Shotgun Rest API</p>
-                      </a>
-                 </li>
-                 <li>
-                      <a href="#">
-                            <img src="shotgun_img/shotgun-4.png">
-                            <p class="flex-caption">Shotgun PostMan Rest API Test</p>
-                      </a>
-                 </li>
-              </ul>
-          </div>
-
-    - role: 웹 개발팀 | 웹 개발 사원 (연구원)
-      time: 2013.04 - 2015.07
-      company: 케이트, 부산
-      details: |
-        영남권 대학교에서 운영하는 장비센터 홈페이지를 Asp.Net, Ms-Sql을 이용하여 개발 및 유지보수하였습니다.
-
-          - <p style="font-weight:bold;">부산대학교 공동실험실습관 <a href="https://labcenter.pusan.ac.kr" target="_blank" style="color: #97AAC3;">바로가기</a></p>
-            <p style="color: #97AAC3;">개발 내용 : SSL 적용, 커뮤니티 게시판 개발, 기기 이용 신청 기능 개선 및 사이트 유지보수</p>
-            <p style="color: #97AAC3;">개발 환경 : Windows Server 2008, IIS 7, Asp.Net 3.5, SQL Server 2008 R2</p>
-            <div class="flexslider _flexslider_5">
-               <ul class="slides">
-                  <li>
-                     <a href="#">
-                        <img src="center_img/labcenter1.png">
-                        <p class="flex-caption">메인 화면</p>
-                     </a>
-                  </li>
-                  <li>
-                     <a href="#">
-                        <img src="center_img/labcenter2.png">
-                        <p class="flex-caption">공지사항 화면</p>
-                     </a>
-                  </li>
-                  <li>
-                     <a href="#">
-                        <img src="center_img/labcenter3.png">
-                        <p class="flex-caption">사이트맵 화면</p>
-                     </a>
-                   </li>
-                </ul>
-            </div>
-
-          - <p style="font-weight:bold;">창원대학교 공동실험실습관 <a href="https://centlab.changwon.ac.kr" target="_blank" style="color: #97AAC3;">바로가기</a></p>
-            <p style="color: #97AAC3;">개발 내용 : SSL 적용, 고객센터 게시판 개발, 기기 이용 신청 기능 개선 및 사이트 유지보수</p>
-            <p style="color: #97AAC3;">개발 환경 : Windows Server 2008, IIS 7, Asp.Net 3.5, SQL Server 2008 R2</p>
-            <div class="flexslider _flexslider_6">
-               <ul class="slides">
-                  <li>
-                     <a href="#">
-                        <img src="center_img/centlab1.png">
-                        <p class="flex-caption">메인 화면</p>
-                     </a>
-                  </li>
-                  <li>
-                     <a href="#">
-                        <img src="center_img/centlab2.png">
-                        <p class="flex-caption">공지사항 화면</p>
-                     </a>
-                  </li>
-                  <li>
-                     <a href="#">
-                        <img src="center_img/centlab3.png">
-                        <p class="flex-caption">자료실 화면</p>
-                     </a>
-                   </li>
-                </ul>
-            </div>
-
-          - <p style="font-weight:bold;">창원대학교 실험실 안전관리시스템 <a href="http://labsafety.changwon.ac.kr" target="_blank" style="color: #97AAC3;">바로가기</a></p>
-            <p style="color: #97AAC3;">개발 내용 : 비동기식 게시판 호출 개발, MSDS API 적용, 사이버 안전교육 개발, 연구실 관리 개발 및 사이트 유지보수 </p>
-            <p style="color: #97AAC3;">개발 환경 : Windows Server 2012, IIS 8, Asp.Net MVC 5, SQL Server 2012</p>
-            <div class="flexslider _flexslider_7">
-               <ul class="slides">
-                  <li>
-                     <a href="#">
-                        <img src="center_img/labsafety1.png">
-                        <p class="flex-caption">메인 화면</p>
-                     </a>
-                  </li>
-                  <li>
-                     <a href="#">
-                        <img src="center_img/labsafety2.png">
-                        <p class="flex-caption">MSDS 검색 화면</p>
-                     </a>
-                  </li>
-                  <li>
-                     <a href="#">
-                        <img src="center_img/labsafety3.png">
-                        <p class="flex-caption">안전교육 안내 화면</p>
-                     </a>
-                   </li>
-                  <li>
-                     <a href="#">
-                        <img src="center_img/labsafety4.png">
-                        <p class="flex-caption">연구실 관리 Layout 화면</p>
-                     </a>
-                   </li>
-                  <li>
-                     <a href="#">
-                        <img src="center_img/labsafety5.png">
-                        <p class="flex-caption">안전교육 화면</p>
-                     </a>
-                   </li>
-               </ul>
-            </div>
-
-          - <p style="font-weight:bold;">부산대학교 연구장비공동활용지원센터 <a href="https://ccrf.pusan.ac.kr" target="_blank" style="color: #97AAC3;">바로가기</a></p>
-            <p style="color: #97AAC3;">개발 내용 : 전체 사이트 고도화, SSL 적용 및 사이트 유지보수</p>
-            <p style="color: #97AAC3;">개발 환경 : Windows Server 2012, IIS 8, Asp.Net 4.5, SQL Server 2012</p>
-            <div class="flexslider _flexslider_8">
-               <ul class="slides">
-                  <li>
-                     <a href="#">
-                        <img src="center_img/ccrf1.png">
-                        <p class="flex-caption">메인 화면</p>
-                     </a>
-                  </li>
-                  <li>
-                     <a href="#">
-                        <img src="center_img/ccrf2.png">
-                        <p class="flex-caption">예약현황 화면</p>
-                     </a>
-                  </li>
-                  <li>
-                     <a href="#">
-                        <img src="center_img/ccrf3.png">
-                        <p class="flex-caption">공지사항 화면</p>
-                     </a>
-                   </li>
-               </ul>
-            </div>
-            
-          - <p style="font-weight:bold;">경남과학기술대학교 실험실 안전관리시스템 <a href="http://safe.gntech.ac.kr" target="_blank" style="color: #97AAC3;">바로가기</a></p>
-            <p style="color: #97AAC3;">개발 내용 : 비동기식 게시판 호출 개발, MSDS API 적용, 사이버 안전교육 개발, 연구실 관리 개발 및 사이트 유지보수</p>
-            <p style="color: #97AAC3;">개발 환경 : Windows Server 2012, IIS 8, Asp.Net MVC 5, SQL Server 2012</p>
-            <div class="flexslider _flexslider_9">
-               <ul class="slides">
-                  <li>
-                     <a href="#">
-                        <img src="center_img/safe1.png">
-                        <p class="flex-caption">메인 화면</p>
-                     </a>
-                  </li>
-                  <li>
-                     <a href="#">
-                        <img src="center_img/safe2.png">
-                        <p class="flex-caption">안전교육 안내 화면</p>
-                     </a>
-                  </li>
-                  <li>
-                     <a href="#">
-                        <img src="center_img/safe3.png">
-                        <p class="flex-caption">MSDS 검색 화면</p>
-                     </a>
-                   </li>
-               </ul>
-            </div>
-          - <p style="font-weight:bold;">MSDS API 적용 및 활용 <a href="https://www.data.go.kr/dataset/15001197/openapi.do" target="_blank" style="color: #97AAC3;">바로가기</a></p>
-            <p style="color: #97AAC3;">개발 내용 : 공공데이터포털에서 제공해주는 물질안전보건자료 MSDS API 적용</p>
-            <p style="color: #97AAC3;">개발 환경 : Windows Server 2012, IIS 8, Asp.Net MVC 5, SQL Server 2012</p>
-            <div class="flexslider _flexslider_10">
-               <ul class="slides">
-                  <li>
-                     <a href="#">
-                        <img src="msds_img/msds-1.png">
-                        <p class="flex-caption">MSDS 검색 화면</p>
-                     </a>
-                  </li>
-                  <li>
-                     <a href="#">
-                        <img src="msds_img/msds-2.png">
-                        <p class="flex-caption">MSDS 검색 결과 화면</p>
-                     </a>
-                  </li>
-                  <li>
-                     <a href="#">
-                        <img src="msds_img/msds-3.png">
-                        <p class="flex-caption">MSDS 상세 화면 1</p>
-                     </a>
-                   </li>
-                  <li>
-                     <a href="#">
-                        <img src="msds_img/msds-4.png">
-                        <p class="flex-caption">MSDS 상세 화면 2</p>
-                     </a>
-                   </li>
-               </ul>
-            </div>
-
-    - role: TD/RnD팀 | 사원
-      time: 2012.03 - 2013.02
-      company: AzWorks, 부산
-      details: |
-        사내 매신저 및 Task 매니저를 개발을 위한 연구를 하였습니다.
-
-          - <p style="font-weight:bold;">사내 매신저 RnD </p>
-            <p>개발 내용 : <span style="color: #97AAC3;">XMPP 프로토콜을 사용하는 Openfire와 Spark 오픈소스를 활용하여 사내 매신저 개발</span></p>
-            <p>개발 환경 : <span style="color: #97AAC3;">Linux CentOS 5, Apache 2.4, MySql 5.3, Java 8</span></p>
-            <div class="flexslider _flexslider_11">
-               <ul class="slides">
-                  <li>
-                     <a href="#">
-                        <img src="az_img/openfire.png">
-                        <p class="flex-caption">openfire(xmpp) 관리자 로그인 화면</p>
-                     </a>
-                  </li>
-                  <li>
-                     <a href="#">
-                        <img src="az_img/spark.png" style="height:280px;">
-                        <p class="flex-caption">spark 로그인 화면</p>
-                     </a>
-                  </li>
-               </ul>
-            </div>
-           
-          - <p style="font-weight:bold;">Task 매니저 RnD <a href="https://github.com/Southpaw-TACTIC/TACTIC/tree/4.6/src" target="_blank" style="color: #97AAC3;">바로가기</a></p>
-            <p style="color: #97AAC3;">개발 내용 : southpaw 사의 TACTIC 오픈소스를 활용한 Task 매니저 개발</p>
-            <p style="color: #97AAC3;">개발 환경 : Linux CentOS 5, Apache 2.4, MySql 5.3, Java 8, Python 2.7</p>
-            <div class="flexslider _flexslider_12">
-               <ul class="slides">
-                  <li>
-                     <a href="#">
-                        <img src="tactic_img/tactic-0.png">
-                        <p class="flex-caption">tactic Hello World 출력 화면</p>
-                     </a>
-                  </li>
-                  <li>
-                     <a href="#">
-                        <img src="tactic_img/tactic-1.png">
-                        <p class="flex-caption">Tactic Layout Text 출력 화면</p>
-                     </a>
-                  </li>
-                  <li>
-                     <a href="#">
-                        <img src="tactic_img/tactic-2.png">
-                        <p class="flex-caption">Tactic DatePicker 적용 화면</p>
-                     </a>
-                   </li>
-               </ul>
-            </div>
-
-skills:
-    title: Skills &amp; Proficiency
-
-    toolset:
-      - name: ASP.NET
-        level: 80%
-        
-      - name: PHP
-        level: 90%
-        
-      - name: React & Javascript & jQuery
-        level: 85%
-
-      - name: HTML5 & CSS
-        level: 90%
-
-      - name: Python & PyQT
-        level: 60%
-
-      - name: NodeJS
-        level: 80%
-
-footer: 
-    
+      university: 인제대학교
+      time: 2005.03 - 2012.02
