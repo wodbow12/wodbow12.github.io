@@ -1,0 +1,47 @@
+flowchart TB
+    Start(["프로젝트 기획"]):::start
+    Plan["시놉시스·트리트먼트"]:::input
+    World[("캐릭터·설정·씬 정보")]:::store
+    Writer["작가 역할<br/>초안 작성·기존 원문"]:::ai
+    Critic["비평가 역할<br/>구조·대사 등 리뷰"]:::ai
+    Verifier["검증자 역할<br/>설정·일관성 검토"]:::ai
+    Review{"수정 필요?"}:::decision
+    Rewrite["작가 수정<br/>반복·토큰 예산 내"]:::ai
+    Editor["편집 역할<br/>최종 문장 정리"]:::ai
+    Diff["변경안 비교 제시"]:::process
+    Accept{"사용자 채택?"}:::decision
+    Keep["거절·기존 원문 유지"]:::output
+    Version[("채택·버전 기록")]:::store
+    Media["이미지·영상·음성 생성<br/>타임라인 편집"]:::ai
+    QA["QA 검수·이슈 확인"]:::process
+    Approve{"필수 검수 완료·승인?"}:::decision
+    Fix["보완 작업·재검수"]:::process
+    Export["승인 이력 보존<br/>문서·영상 출력"]:::output
+    Start --> Plan
+    Plan --> World
+    World --> Writer
+    Writer --> Critic
+    Writer --> Verifier
+    Critic --> Review
+    Verifier --> Review
+    Editor --> Diff
+    Diff --> Accept
+    Version --> Media
+    Media --> QA
+    QA --> Approve
+    Review --> |"수정·예산 내"| Rewrite
+    Review --> |"통과·상한 도달"| Editor
+    Rewrite -.-> |"수정 후 재리뷰"| Writer
+    Accept --> |"거절"| Keep
+    Accept --> |"채택"| Version
+    Approve --> |"미완료·반려"| Fix
+    Approve --> |"승인"| Export
+    Fix -.-> |"보완 후 재검수"| QA
+    classDef start fill:#176c62,stroke:#176c62,color:#ffffff
+    classDef input fill:#e8f2fb,stroke:#83a7c4,color:#24475d
+    classDef process fill:#f6f7f8,stroke:#afb9c1,color:#33424e
+    classDef ai fill:#f0ebf9,stroke:#a897be,color:#4f3c68
+    classDef decision fill:#fff4dc,stroke:#c5a363,color:#65502e
+    classDef store fill:#edf4ec,stroke:#92af8b,color:#385733
+    classDef output fill:#e6f3ec,stroke:#80aa94,color:#28543f
+    classDef error fill:#fbede8,stroke:#c29482,color:#744a3d

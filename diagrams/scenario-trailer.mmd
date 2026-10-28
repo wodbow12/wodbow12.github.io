@@ -1,0 +1,56 @@
+flowchart TB
+    Start(["시나리오 입력"]):::start
+    Parse["텍스트 추출·씬 분해"]:::input
+    Analyze["선택적 LLM 분석·보강"]:::ai
+    Scenes[("프로젝트·씬 데이터")]:::store
+    Shots["샷 분할·VFX 분석"]:::ai
+    Purpose{"견적 목적"}:::decision
+    Bid["입찰 견적<br/>RAG 비활성"]:::process
+    BidSave["입찰 견적 저장"]:::output
+    Search["씬 질의 임베딩<br/>유사 견적 검색"]:::ai
+    Gate{"유사 사례 있음?"}:::decision
+    Context["참고 견적을<br/>프롬프트에 추가"]:::process
+    Forecast["LLM 실적 전망<br/>근거 없으면 기본 입력"]:::ai
+    ForecastSave["전망·검색 근거<br/>입찰과 별도 저장"]:::output
+    Excel["과거 견적 Excel<br/>씬·자산 레코드"]:::input
+    Embed["정규화·임베딩"]:::process
+    Milvus[("Milvus 검색 자료")]:::store
+    Pick["핵심 씬 추천·선택"]:::ai
+    Concept["캐릭터·컨셉 후보"]:::ai
+    Select["사용자 후보 선택"]:::process
+    Video["비동기 영상 생성"]:::ai
+    Trailer["트레일러 구성"]:::process
+    Export["FFmpeg MP4 출력"]:::output
+    Director["디렉터 대화<br/>편집 수정 요청"]:::ai
+    Start --> Parse
+    Parse --> Analyze
+    Analyze --> Scenes
+    Scenes --> Shots
+    Scenes --> Pick
+    Shots --> Purpose
+    Bid --> BidSave
+    Search --> Gate
+    Context --> Forecast
+    Forecast --> ForecastSave
+    Excel --> Embed
+    Embed --> Milvus
+    Pick --> Concept
+    Concept --> Select
+    Select --> Video
+    Video --> Trailer
+    Trailer --> Export
+    Purpose --> |"입찰"| Bid
+    Purpose --> |"실적 전망"| Search
+    Gate --> |"있음"| Context
+    Gate --> |"없음·검색 불가"| Forecast
+    Milvus --> |"검색 자료"| Search
+    Trailer --> |"편집 보조"| Director
+    Director -.-> |"피드백 반영"| Trailer
+    classDef start fill:#176c62,stroke:#176c62,color:#ffffff
+    classDef input fill:#e8f2fb,stroke:#83a7c4,color:#24475d
+    classDef process fill:#f6f7f8,stroke:#afb9c1,color:#33424e
+    classDef ai fill:#f0ebf9,stroke:#a897be,color:#4f3c68
+    classDef decision fill:#fff4dc,stroke:#c5a363,color:#65502e
+    classDef store fill:#edf4ec,stroke:#92af8b,color:#385733
+    classDef output fill:#e6f3ec,stroke:#80aa94,color:#28543f
+    classDef error fill:#fbede8,stroke:#c29482,color:#744a3d

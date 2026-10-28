@@ -1,0 +1,41 @@
+flowchart TB
+    Video["원본 영상"]:::input
+    ShotGrid["ShotGrid 샷 정보"]:::input
+    Review["프레임 탐색·비교·주석"]:::process
+    Normalize["평가 요소 입력·정규화"]:::process
+    Score["공통 코어로 점수·등급 계산"]:::process
+    History[("평가 이력 누적 저장")]:::store
+    Latest["샷·평가자별<br/>최신 유효 값 집계"]:::process
+    Gate{"완료·권한·필드 충족?"}:::decision
+    Block["반영 차단<br/>미완료·설정 안내"]:::error
+    DryRun["드라이런·대상 목록 확인"]:::process
+    Approve{"사용자 승인?"}:::decision
+    Cancel["반영 취소"]:::output
+    Write["최종 필드 반영 요청"]:::process
+    Batch{"일괄 갱신 성공?"}:::decision
+    Retry["개별 재시도<br/>실패 항목 표시"]:::process
+    Done["처리 결과 확인"]:::output
+    Video --> Review
+    ShotGrid --> Review
+    Review --> Normalize
+    Normalize --> Score
+    Score --> History
+    History --> Latest
+    Latest --> Gate
+    DryRun --> Approve
+    Write --> Batch
+    Gate --> |"미충족"| Block
+    Gate --> |"충족"| DryRun
+    Block -.-> |"조건 확인 후 재조회"| Latest
+    Approve --> |"취소"| Cancel
+    Approve --> |"승인"| Write
+    Batch --> |"실패"| Retry
+    Batch --> |"성공"| Done
+    classDef start fill:#176c62,stroke:#176c62,color:#ffffff
+    classDef input fill:#e8f2fb,stroke:#83a7c4,color:#24475d
+    classDef process fill:#f6f7f8,stroke:#afb9c1,color:#33424e
+    classDef ai fill:#f0ebf9,stroke:#a897be,color:#4f3c68
+    classDef decision fill:#fff4dc,stroke:#c5a363,color:#65502e
+    classDef store fill:#edf4ec,stroke:#92af8b,color:#385733
+    classDef output fill:#e6f3ec,stroke:#80aa94,color:#28543f
+    classDef error fill:#fbede8,stroke:#c29482,color:#744a3d

@@ -1,0 +1,45 @@
+flowchart TB
+    Model["모델링"]:::input
+    Look["룩뎁"]:::input
+    Rig["리깅"]:::input
+    Animation["애니메이션"]:::input
+    Lighting["라이팅"]:::input
+    FX["FX"]:::input
+    Comp["컴포지팅"]:::input
+    Align["7개 제작 파트장<br/>PM·슈퍼바이저 요구 조율"]:::process
+    Common["공통 처리 절차·인계 기준"]:::process
+    Load["공정별 파일 불러오기"]:::process
+    Gate{"4단계 자동 검수"}:::decision
+    Fix["오류 확인·파일 수정"]:::process
+    Register[("제작 데이터 등록<br/>버전 관리")]:::store
+    Publish["작업 결과 내보내기"]:::process
+    Approve{"승인 여부"}:::decision
+    Revise["수정 후 다시 내보내기"]:::process
+    State["ShotGrid 상태 갱신"]:::output
+    Model --> Align
+    Look --> Align
+    Rig --> Align
+    Animation --> Align
+    Lighting --> Align
+    FX --> Align
+    Comp --> Align
+    Align --> Common
+    Common --> Load
+    Load --> Gate
+    Register --> Publish
+    Publish --> Approve
+    Gate --> |"검수 실패"| Fix
+    Gate --> |"통과"| Register
+    Fix -.-> |"수정 후 재검수"| Load
+    Approve --> |"수정 필요"| Revise
+    Approve --> |"승인 이벤트"| State
+    Revise -.-> |"재제출"| Publish
+    Publish --> |"파일 업로드 이벤트"| State
+    classDef start fill:#176c62,stroke:#176c62,color:#ffffff
+    classDef input fill:#e8f2fb,stroke:#83a7c4,color:#24475d
+    classDef process fill:#f6f7f8,stroke:#afb9c1,color:#33424e
+    classDef ai fill:#f0ebf9,stroke:#a897be,color:#4f3c68
+    classDef decision fill:#fff4dc,stroke:#c5a363,color:#65502e
+    classDef store fill:#edf4ec,stroke:#92af8b,color:#385733
+    classDef output fill:#e6f3ec,stroke:#80aa94,color:#28543f
+    classDef error fill:#fbede8,stroke:#c29482,color:#744a3d

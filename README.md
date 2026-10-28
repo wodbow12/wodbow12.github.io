@@ -1,60 +1,17 @@
-<a href="https://jekyll-themes.com">
-<img src="https://img.shields.io/badge/featured%20on-JT-red.svg" height="20" alt="Jekyll Themes Shield" >
-</a>
+# 이동원 포트폴리오 · 경력 소개
 
-# Orbit
-> This theme is designed by Xiaoying Riley at [3rd Wave Media](http://themes.3rdwavemedia.com/). 
-> Visit her [website](http://themes.3rdwavemedia.com/) for more themes.
+- https://wodbow12.github.io/ — AI·AX 개발 포트폴리오
+- https://wodbow12.github.io/career/ — 기존 경력 소개 페이지
 
-I have made this into a Jekyll Theme. Checkout the live demo [here](https://webjeda.com/online-cv/).
+## 구성
 
-<table>
-  <tr>
-    <th>Desktop</th>
-    <th>Mobile</th>
-  </tr>
-  <tr>
-    <td>
-        <img src="https://webjeda.com/online-cv/assets/images/desktop.png?raw=true" width="600"/>
-    </td>
-    <td>
-        <img src="https://webjeda.com/online-cv/assets/images/mobile.png?raw=true" width="250"/>
-    </td>
-  </tr>
-</table>
+- `index.html`: 새 포트폴리오 본문·스타일·동작
+- `career/index.html`: 기존 경력 소개 페이지
+- `assets/images/`: 포트폴리오 이미지 및 기존 경력 소개 이미지
+- `assets/fonts/`: Pretendard Variable 및 OFL 라이선스
+- `diagrams/`: 프로젝트 흐름도 SVG 및 Mermaid 원본
+- `.nojekyll`: 빌드 없이 정적 파일을 제공하는 GitHub Pages 설정
 
-## Installation
+두 페이지는 상단·본문 링크로 이동할 수 있습니다. 기존 경력 소개의 프로필 이미지는 루트의 `/assets/images/dongwon-profile.jpg`를 사용합니다.
 
-* [Fork](https://github.com/sharu725/online-cv/fork) the repository
-* Delete the `gh-pages` branch
-* Re-create the `gh-pages` branch
-* Go to settings and set Github Pages source as master.
-* Your new site should be ready at `https://username.github.io/online-cv/`
-
-Change all the details from one place: ``_data/data.yml``
-
-Watch my [video](https://www.youtube.com/embed/T2nx6tj-ZH4) on installation.
-
-## Skins
-
-There are 6 color schemes available:
-
-| Blue | Turquoise | Green |
-|---------|---------|---------|
-| <img src="https://webjeda.com/online-cv/assets/images/blue.jpg" width="300"/> | <img src="https://webjeda.com/online-cv/assets/images/turquoise.jpg" width="300"/> | <img src="https://webjeda.com/online-cv/assets/images/green.jpg" width="300"/> |
-
-| Berry | Orange | Ceramic |
-|---------|---------|---------|
-| <img src="https://webjeda.com/online-cv/assets/images/berry.jpg" width="300"/> | <img src="https://webjeda.com/online-cv/assets/images/orange.jpg" width="300"/> | <img src="https://webjeda.com/online-cv/assets/images/ceramic.jpg" width="300"/> |
-
-## Credits
-
-Thanks to [Nelson Estevão](https://github.com/nelsonmestevao) for all the [contributions](https://github.com/sharu725/online-cv/commits?author=nelsonmestevao).
-
-Thanks to [t-h-e(sfrost)](https://github.com/t-h-e) for all the [contributions](https://github.com/sharu725/online-cv/commits?author=t-h-e).
-
-Check out for more themes: [**Jekyll Themes**](http://jekyll-themes.com).
-
-## License
-
-This project is licensed under the [MIT license](LICENSE.txt).
+기존 Jekyll 템플릿 및 제작 자료는 보존하며, 현재 두 페이지는 정적 HTML로 제공합니다. 포트폴리오 이미지와 글꼴을 배포할 때 해당 디렉터리와 라이선스를 함께 유지하세요.

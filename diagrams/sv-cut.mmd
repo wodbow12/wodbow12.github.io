@@ -1,0 +1,41 @@
+flowchart TB
+    Start(["원본 영상 입력"]):::start
+    Probe["영상 정보·프레임 확인"]:::input
+    Backend{"감지 백엔드 선택"}:::decision
+    TransNet["TransNetV2<br/>프레임 전환 확률 추론"]:::ai
+    Light["PySceneDetect<br/>경량 감지"]:::process
+    Boundary["새 샷 시작 프레임 변환<br/>경계 보정"]:::process
+    Merge["짧은 씬 병합<br/>공통 씬 데이터"]:::process
+    Clips["FFmpeg 씬 클립<br/>기본 재인코딩"]:::output
+    Meta["썸네일·JSON/CSV"]:::output
+    Timeline["EDL·OTIO·FCP7 XML"]:::output
+    Check["출력 프레임·경계 검사"]:::process
+    Review{"누락·과검출 확인"}:::decision
+    Tune["소재별 감지 설정 조정"]:::process
+    Use["클립·편집 타임라인 활용"]:::output
+    Start --> Probe
+    Probe --> Backend
+    TransNet --> Boundary
+    Light --> Boundary
+    Boundary --> Merge
+    Merge --> Clips
+    Merge --> Meta
+    Merge --> Timeline
+    Clips --> Check
+    Meta --> Check
+    Timeline --> Check
+    Check --> Review
+    Backend --> |"딥러닝"| TransNet
+    Backend --> |"경량"| Light
+    TransNet -.-> |"의존성 사용 불가"| Light
+    Review --> |"설정 조정 필요"| Tune
+    Review --> |"검토 후 활용"| Use
+    Tune -.-> |"사용자 조정 후 재실행"| Backend
+    classDef start fill:#176c62,stroke:#176c62,color:#ffffff
+    classDef input fill:#e8f2fb,stroke:#83a7c4,color:#24475d
+    classDef process fill:#f6f7f8,stroke:#afb9c1,color:#33424e
+    classDef ai fill:#f0ebf9,stroke:#a897be,color:#4f3c68
+    classDef decision fill:#fff4dc,stroke:#c5a363,color:#65502e
+    classDef store fill:#edf4ec,stroke:#92af8b,color:#385733
+    classDef output fill:#e6f3ec,stroke:#80aa94,color:#28543f
+    classDef error fill:#fbede8,stroke:#c29482,color:#744a3d
