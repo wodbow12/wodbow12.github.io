@@ -28,3 +28,51 @@ body{background:#f7f8fa;font-size:15px;line-height:1.95}.career-document{max-wid
 .achievement-list li{margin-bottom:8px;padding-left:3px}
 .company-heading{border-top-color:#aebac9}
 @media(max-width:760px){.profile-competencies{grid-template-columns:1fr;gap:4px}.profile-competencies dd{margin-bottom:14px}}
+/* 웹 문서 밀도: 글자 크기는 공통 typography.css를 유지 */
+@media screen{
+.career-document{max-width:1200px;margin:24px auto 48px;padding:34px 44px 44px}
+.doc-title{padding-bottom:24px}
+.doc-title>.label{margin-bottom:8px}
+.doc-title h1{margin-bottom:14px;font-weight:650}
+.doc-person{font-weight:650}
+.doc-position{margin:2px 0 14px}
+.doc-facts{margin-top:16px;padding-top:16px;row-gap:7px}
+.engineering-profile{padding-bottom:22px}
+.engineering-profile h2{margin-top:22px;margin-bottom:12px;font-weight:650}
+.profile-statement{margin-bottom:14px;font-weight:600}
+.engineering-profile strong{font-weight:600}
+.profile-competencies{margin:18px 0;row-gap:10px}
+.profile-competencies dt{font-weight:600}
+.career-document>h2{margin-top:30px;margin-bottom:18px;font-weight:650}
+.company-heading{padding:16px 20px}
+.company-heading h3{font-weight:650}
+.company-role{font-weight:500}
+.company-heading .company-role{font-weight:500}
+.company-heading .company-index{margin-bottom:4px}
+.assignment{margin:18px 0;row-gap:8px}
+.career-block{padding-top:24px;padding-bottom:18px}
+.career-block h4,.earlier-project{font-weight:650}
+.career-block h5{font-weight:600}
+.work-list strong,.achievement-list strong{font-weight:600}
+.record-fields dt,.assignment dt,.doc-facts dt{font-weight:500}
+.career-company{margin-bottom:34px;padding-bottom:26px}
+}
+@media screen and (max-width:1240px) and (min-width:761px){.career-document{margin-left:24px;margin-right:24px}}
+@media screen and (max-width:760px){
+.career-document{margin:12px 8px 28px;padding:24px 20px 30px}
+.doc-title{padding-bottom:20px}.doc-title h1{margin-bottom:12px}
+.doc-facts{margin-top:14px;padding-top:14px;row-gap:8px}
+.profile-competencies{row-gap:4px}.profile-competencies dd{margin-bottom:10px}
+.company-heading{padding:14px 16px}
+}
+/* 프로필 사진: 원본은 보존하고 원형 프레임으로 표시 */
+.doc-identity-row{display:flex;align-items:center;justify-content:space-between;gap:24px;margin:4px 0 18px}
+.doc-identity-text{min-width:0}.doc-identity-row .doc-position{margin-bottom:0}
+.doc-portrait{display:block;width:132px;height:132px;flex-shrink:0;border-radius:50%;object-fit:cover;object-position:50% 30%;border:1px solid #e1e6ed;background:#f3f5f8}
+@media(max-width:760px){.doc-identity-row{gap:16px;margin-bottom:16px}.doc-portrait{width:96px;height:96px}.doc-identity-text .doc-position{font-size:14px;line-height:1.7}}
+@media print{.doc-portrait{width:28mm;height:28mm}.doc-identity-row{break-inside:avoid}}
+/* 이전 경력 회사명·기간은 본문과 좌우 시작선을 일치 */
+.career-company>.company-heading:not(header){margin-left:-10px;margin-right:-10px;padding-left:10px;padding-right:10px;background:#f1f4f8}
+/* 문단 호흡: 같은 항목의 설명과 결과 사이에 짧은 간격 */
+.work-list li>p+p,.achievement-list li>p+p{margin-top:8px}
+.engineering-profile>.hero-description+.hero-description{margin-top:10px}
