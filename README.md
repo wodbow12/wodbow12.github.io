@@ -1,17 +1,15 @@
-# 이동원 포트폴리오 · 경력 소개
+# 이동원 지원 자료 · GitHub Pages 배포 폴더
 
-- https://wodbow12.github.io/ — AI·AX 개발 포트폴리오
-- https://wodbow12.github.io/career/ — 기존 경력 소개 페이지
+## 주소와 역할
+- `/` → `index.html`: AI·AX 구현 포트폴리오. 문제·설계·화면·데이터 흐름·검증 근거.
+- `/career/` → `career/index.html`: 회사별 경력·책임·성과 및 최근 주요 수행 내역.
+- `/downloads/lee-dongwon-resume.pdf`: 핵심 역량·대표 성과·경력·학력을 요약한 4페이지 이력서.
+- `assets/`: 프로젝트 이미지와 공통 Pretendard 웹폰트·라이선스.
+- `diagrams/`: 흐름도 SVG와 편집용 Mermaid 원본.
 
-## 구성
+## 배포
+이 폴더 안의 내용을 `wodbow12.github.io` 저장소의 GitHub Pages 배포 루트에 복사하세요. 기존 메인 대신 포트폴리오가 열립니다. 폴더 구조를 유지하고 `.nojekyll`도 함께 포함하세요. 별도 빌드나 패키지 설치는 필요하지 않습니다.
+경력기술서는 같은 탭의 `career/`로 연결되고, 이력서 버튼은 PDF 다운로드로 연결됩니다. 공개 저장소에 올리면 이력서에 기재된 연락처도 공개됩니다.
 
-- `index.html`: 새 포트폴리오 본문·스타일·동작
-- `career/index.html`: 기존 경력 소개 페이지
-- `assets/images/`: 포트폴리오 이미지 및 기존 경력 소개 이미지
-- `assets/fonts/`: Pretendard Variable 및 OFL 라이선스
-- `diagrams/`: 프로젝트 흐름도 SVG 및 Mermaid 원본
-- `.nojekyll`: 빌드 없이 정적 파일을 제공하는 GitHub Pages 설정
-
-두 페이지는 상단·본문 링크로 이동할 수 있습니다. 기존 경력 소개의 프로필 이미지는 루트의 `/assets/images/dongwon-profile.jpg`를 사용합니다.
-
-기존 Jekyll 템플릿 및 제작 자료는 보존하며, 현재 두 페이지는 정적 HTML로 제공합니다. 포트폴리오 이미지와 글꼴을 배포할 때 해당 디렉터리와 라이선스를 함께 유지하세요.
+## 문서 편집
+HTML은 각 페이지를 편집하면 됩니다. 이력서는 `downloads/resume.html`과 `downloads/resume.css`를 편집하고 PDF를 다시 저장합니다. `resume-content.md`는 이전 요약본이며, 자세한 방법은 `downloads/README.md`를 참고하세요.

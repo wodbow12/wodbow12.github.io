@@ -1,0 +1,29 @@
+/* 웹 공통 타이포그래피: 포트폴리오·경력기술서의 글꼴과 크기를 여기서 수정합니다. */
+@font-face{font-family:SitePretendard;src:url('../assets/fonts/PretendardVariable.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:swap}
+:root{--site-font:SitePretendard,'Malgun Gothic','Apple SD Gothic Neo',sans-serif;--site-body:15px;--site-small:13px;--site-label:12px;--site-section:24px;--site-project:22px;--site-subtitle:16px;--mono:var(--site-font)}
+body,button,input,select,textarea{font-family:var(--site-font)}
+/* 다운로드 파일은 보존하고, 두 페이지의 다운로드 진입 버튼만 숨깁니다. */
+a[download][href*="lee-dongwon-resume.pdf"]{display:none!important}
+@media screen{
+body{font-size:var(--site-body);line-height:1.9}
+.global-header,.global-header a{font-family:var(--site-font)}
+.hero-description,.context>p:not(.label),.project-intro>.context>p:not(.label),.architecture-section .decisions .decision p,.case .case-details .details-content p,.technical-caption,.how-description,.principle p,.print-closing .closing-commitment p,
+.engineering-profile>p:not(.profile-statement),.profile-competencies dd,.career-block>p:not(.record-tech):not(.record-period),.work-list,.achievement-list,.responsibility,.record-fields,.career-company>p:not(.company-role),.skills p,.career-education{font-size:var(--site-body);line-height:1.9}
+.hero-stats .capability-description,.hero-stat.capability .capability-description,.foundation-row span,.project-overview,.project-scope,.print-overview-scope p,.tech-grid ul,.case .case-details .workflow-note,.record-tech,.career-block .record-tech{font-size:var(--site-small);line-height:1.85}
+.case h2,.company-heading h3,.career-block h4,.earlier-project{font-size:var(--site-project);line-height:1.55;letter-spacing:-.4px}
+.how-build h2,.career-document>h2,.engineering-profile h2,#skills>h2{font-size:var(--site-section);line-height:1.5}
+.architecture-section .decision h3,.case .case-details .details-content h4,.details-content .full-decision h5,.principle h3,.career-block h5,.skills h3,.work-list strong{font-size:var(--site-subtitle);line-height:1.65}
+.eyebrow,.label,.decisions-label,.project-no,.hero-stat.capability .label,.section-top,.doc-title>.label,.record-period,.career-block .record-period,.company-heading .company-index{font-size:var(--site-label);line-height:1.7}
+.doc-facts,.profile-competencies dt,.assignment,.assignment dt,.record-fields dt,.project-context{font-size:var(--site-body);line-height:1.9}
+.hero-stat.capability h2{font-size:19px;line-height:1.55}
+.hero-stat.capability .capability-proof,.stack span,.chips span,.principle-evidence,.shot-caption{font-size:12px;line-height:1.8}
+.doc-title h1{font-size:36px;line-height:1.4}
+.profile-statement,.build-statement{font-size:22px;line-height:1.7}
+.achievement-list p{margin:5px 0 0}
+}
+@media screen and (max-width:760px){
+:root{--site-body:14px;--site-small:12px;--site-label:11px;--site-section:22px;--site-project:20px;--site-subtitle:15px}
+.profile-statement,.build-statement{font-size:20px}.doc-title h1{font-size:30px}
+.hero-stats{grid-template-columns:1fr 1fr}.hero-stat.capability h2{font-size:17px}
+}
+@media screen and (max-width:480px){.hero-stats{grid-template-columns:1fr}.hero-stat.capability .label{font-size:11px}.global-brand span{font-family:var(--site-font)}}

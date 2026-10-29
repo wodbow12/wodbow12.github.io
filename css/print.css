@@ -1,0 +1,1309 @@
+/* 인쇄 전용 스타일. 아래쪽 규칙이 앞쪽 규칙보다 우선합니다. */
+
+/* submission-print-layout */
+/* Submission print layout: A4 / background graphics ON / scale 100%. */
+@font-face {
+    font-family: PrintPretendard;
+    src: url('../assets/fonts/PretendardVariable.woff2') format('woff2');
+    font-weight: 100 900;
+    font-display: swap
+}
+
+@page {
+    size: A4 portrait;
+    margin: 13mm 13mm 14mm
+}
+
+@media print {
+    :root {
+        --mono: PrintPretendard, 'Malgun Gothic', sans-serif;
+        --bg: #fff
+    }
+
+    * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        box-shadow: none !important;
+        text-shadow: none !important
+    }
+
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        background: #fff !important;
+        scroll-padding: 0
+    }
+
+    body {
+        font-family: PrintPretendard, 'Malgun Gothic', sans-serif;
+        font-size: 9pt;
+        line-height: 1.65;
+        word-break: keep-all;
+        overflow-wrap: break-word
+    }
+
+    .wrap {
+        max-width: none;
+        width: 100%;
+        padding: 0;
+        margin: 0
+    }
+
+    .global-header,
+    .site-head,
+    .skip,
+    .contact-actions,
+    #copy-feedback,
+    .site-foot,
+    .lightbox {
+        display: none !important
+    }
+
+    .hero {
+        padding: 8mm 0 0;
+        margin: 0;
+        break-inside: avoid
+    }
+
+    .pills {
+        margin-bottom: 7mm
+    }
+
+    .pill {
+        font-size: 7pt
+    }
+
+    .hero-row {
+        grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+        gap: 6mm
+    }
+
+    .hero h1 {
+        font-size: 26pt;
+        line-height: 1.35;
+        letter-spacing: -1pt;
+        margin-bottom: 6mm
+    }
+
+    .hero-description {
+        font-size: 9.5pt;
+        line-height: 1.9
+    }
+
+    .hero-specialties {
+        margin-top: 5mm;
+        gap: 1.5mm
+    }
+
+    .hero-specialties span {
+        font-size: 7pt
+    }
+
+    .competency {
+        padding: 4mm;
+        margin: 0 !important
+    }
+
+    .foundation-row {
+        padding: 3mm 0
+    }
+
+    .foundation-row span {
+        font-size: 8pt
+    }
+
+    .foundation-row b {
+        font-size: 7pt
+    }
+
+    .hero-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 4mm;
+        margin-top: 8mm
+    }
+
+    .hero-stat.capability {
+        padding: 4mm
+    }
+
+    .hero-stat.capability h2 {
+        font-size: 12pt;
+        margin: 0 0 2mm
+    }
+
+    .hero-stat.capability .label {
+        font-size: 7pt;
+        margin-bottom: 2mm
+    }
+
+    .hero-stat.capability .capability-description {
+        font-size: 8.5pt;
+        line-height: 1.7;
+        margin-bottom: 3mm
+    }
+
+    .capability-proof {
+        font-size: 7.5pt;
+        padding-top: 2mm
+    }
+
+    .section-top {
+        margin: 6mm 0 0;
+        font-size: 7pt
+    }
+
+    .case {
+        display: block;
+        break-before: page;
+        break-inside: auto;
+        overflow: visible;
+        border: 0;
+        border-radius: 0;
+        margin: 0;
+        padding: 0;
+        scroll-margin: 0
+    }
+
+    .case-head {
+        padding: 0 0 4mm;
+        align-items: center;
+        gap: 4mm
+    }
+
+    .case-heading {
+        gap: 3mm
+    }
+
+    .case h2 {
+        font-size: 16pt;
+        line-height: 1.5;
+        letter-spacing: -.4pt
+    }
+
+    .project-no {
+        font-size: 7pt;
+        padding: 1mm 2mm
+    }
+
+    .trait {
+        display: flex;
+        font-size: 6pt;
+        white-space: normal;
+        text-align: right;
+        max-width: 42mm;
+        padding: 0
+    }
+
+    .project-intro {
+        padding: 0 0 4mm
+    }
+
+    .project-intro>.role {
+        font-size: 8pt;
+        line-height: 1.7;
+        margin: 0 0 3mm
+    }
+
+    .project-intro>p {
+        font-size: 10pt;
+        line-height: 1.7;
+        margin: 0 0 3mm
+    }
+
+    .project-intro>p::before {
+        height: 10pt
+    }
+
+    .stack {
+        gap: 1mm;
+        margin: 0
+    }
+
+    .stack span {
+        font-size: 6.5pt;
+        padding: 1mm 1.5mm;
+        line-height: 1.5
+    }
+
+    .project-intro>.context {
+        margin-top: 4mm;
+        padding-top: 4mm
+    }
+
+    .context>.label,
+    .decisions-label {
+        font-size: 7pt !important;
+        margin: 0 0 2mm !important;
+        letter-spacing: .5pt
+    }
+
+    .project-intro>.context>p:not(.label) {
+        font-size: 9pt;
+        line-height: 1.8;
+        margin: 0 0 2.5mm
+    }
+
+    .case-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        grid-template-rows: auto;
+        gap: 6mm;
+        padding: 5mm 0 0;
+        align-items: start;
+        break-inside: avoid
+    }
+
+    .case-grid>.text-column {
+        grid-column: 2;
+        grid-row: 1;
+        margin: 0
+    }
+
+    .case-grid>.visual-column {
+        grid-column: 1;
+        grid-row: 1
+    }
+
+    .visual-column>.screen-frame {
+        width: 100%;
+        margin: 0;
+        break-inside: avoid
+    }
+
+    .screen-bar {
+        font-size: 5.5pt;
+        padding: 1.5mm
+    }
+
+    .screen-frame img {
+        height: 62mm;
+        max-height: 62mm;
+        object-fit: contain;
+        width: 100%;
+        background: #f1f3f5
+    }
+
+    .technical-caption {
+        font-size: 7.3pt;
+        line-height: 1.7;
+        margin: 2mm 0 0
+    }
+
+    .architecture-section {
+        padding: 0
+    }
+
+    .architecture-section>.decisions {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3mm;
+        margin: 0
+    }
+
+    .decisions .decision {
+        padding: 3mm;
+        gap: 2mm;
+        grid-template-columns: 4mm minmax(0, 1fr);
+        break-inside: avoid
+    }
+
+    .decision>span {
+        font-size: 7pt
+    }
+
+    .architecture-section .decision h3 {
+        font-size: 9pt;
+        line-height: 1.6;
+        margin: 0 0 1mm
+    }
+
+    .architecture-section .decisions .decision p {
+        font-size: 8pt;
+        line-height: 1.7
+    }
+
+    .coordination-figure {
+        min-height: 62mm;
+        padding: 4mm 2mm
+    }
+
+    .coord-top {
+        gap: 1mm
+    }
+
+    .coord-top span {
+        font-size: 6.5pt;
+        padding: 1mm
+    }
+
+    .coord-center {
+        padding: 2mm
+    }
+
+    .coord-center strong {
+        font-size: 12pt
+    }
+
+    .coord-center small,
+    .coord-center p,
+    .coord-bottom {
+        font-size: 7pt
+    }
+
+    .detail-footer {
+        break-before: page;
+        display: block;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        background: #fff
+    }
+
+    .detail-footer>.metric-note {
+        display: none
+    }
+
+    .detail-footer>.case-details {
+        display: block;
+        border: 0;
+        margin: 0;
+        background: #fff
+    }
+
+    .case-details::details-content {
+        display: contents !important
+    }
+
+    .detail-footer>.case-details>.details-content,
+    .detail-footer>.case-details:not([open])>.details-content {
+        display: block !important;
+        padding: 4mm 0 0
+    }
+
+    .detail-footer>.case-details>summary {
+        display: block;
+        cursor: default;
+        font-size: 11pt !important;
+        font-weight: 650;
+        padding: 2.5mm 3mm;
+        background: #edf1f9;
+        border-radius: 0
+    }
+
+    .case-details>summary::after {
+        display: none
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    dt,
+    caption {
+        break-after: avoid;
+        orphans: 3;
+        widows: 3
+    }
+
+    p,
+    li,
+    dd {
+        orphans: 3;
+        widows: 3
+    }
+
+    .case .case-details .details-content h4 {
+        font-size: 10.5pt;
+        margin: 0 0 3mm;
+        line-height: 1.5
+    }
+
+    .case .case-details .details-content h5 {
+        font-size: 8.5pt;
+        line-height: 1.6;
+        margin: 0 0 1.5mm
+    }
+
+    .flow-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+        gap: 5mm;
+        align-items: start;
+        break-inside: avoid
+    }
+
+    .case .case-details .flow-layout>.data-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5mm;
+        margin: 0
+    }
+
+    .data-grid>div {
+        padding-top: 2mm
+    }
+
+    .case .case-details dt {
+        font-size: 7.5pt
+    }
+
+    .case .case-details dd {
+        font-size: 8pt;
+        line-height: 1.7;
+        margin: 1mm 0 0
+    }
+
+    .workflow-legend {
+        font-size: 6.5pt;
+        gap: 2mm
+    }
+
+    .workflow-legend i {
+        width: 2mm;
+        height: 2mm
+    }
+
+    .flow-chart-area .diagram-scroll {
+        width: 60%;
+        margin: 2mm auto 0;
+        overflow: visible;
+        break-inside: avoid
+    }
+
+    .flow-chart-area .workflow-svg {
+        min-width: 0;
+        width: 100%;
+        height: auto;
+        display: block
+    }
+
+    .flow-chart-area .workflow-svg text {
+        font-family: PrintPretendard, sans-serif
+    }
+
+    .case .case-details .workflow-note {
+        font-size: 7pt !important;
+        line-height: 1.6;
+        margin: 2mm 0 0
+    }
+
+    .design-detail {
+        margin-top: 4mm;
+        padding-top: 3mm;
+        break-inside: avoid
+    }
+
+    .full-decisions {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 4mm
+    }
+
+    .case .case-details .full-decision {
+        margin: 0;
+        padding: 0;
+        border: 0
+    }
+
+    .case .case-details .full-decision p {
+        font-size: 8pt;
+        line-height: 1.7;
+        margin: 0
+    }
+
+    .case .case-details .evidence-block {
+        padding-top: 3mm;
+        margin-top: 4mm;
+        break-inside: avoid
+    }
+
+    .detail-test-metrics {
+        gap: 2mm;
+        margin-bottom: 3mm
+    }
+
+    .project-metrics>div {
+        padding: 2mm 1mm
+    }
+
+    .project-metrics strong {
+        font-size: 13pt;
+        letter-spacing: -.4pt
+    }
+
+    .project-metrics small {
+        font-size: 6.5pt;
+        line-height: 1.5;
+        margin-top: 1mm
+    }
+
+    .evidence-wide {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 5mm
+    }
+
+    .case .case-details .details-content p {
+        font-size: 8pt;
+        line-height: 1.7;
+        margin: 0 0 2mm
+    }
+
+    .case .case-details .evidence-note {
+        font-size: 6.5pt !important;
+        line-height: 1.6
+    }
+
+    .evidence-chain {
+        font-size: 6.5pt;
+        line-height: 1.5;
+        padding: 2mm 0;
+        gap: 1mm
+    }
+
+    .next-wide {
+        padding-top: 2mm;
+        margin-top: 2mm
+    }
+
+    .case .case-details table {
+        font-size: 7pt;
+        line-height: 1.5;
+        break-inside: avoid
+    }
+
+    th,
+    td {
+        padding: 1mm
+    }
+
+    .case .case-details .bar-row {
+        font-size: 7pt;
+        grid-template-columns: 18mm 1fr 9mm;
+        margin: 2mm 0
+    }
+
+    .comparison>p {
+        font-size: 6.5pt
+    }
+
+    .how-build {
+        break-before: page;
+        padding: 0;
+        margin: 0
+    }
+
+    .how-build h2 {
+        font-size: 21pt;
+        margin: 0 0 4mm
+    }
+
+    .build-statement {
+        font-size: 14pt;
+        margin: 0 0 4mm
+    }
+
+    .how-description {
+        font-size: 9pt;
+        line-height: 1.8;
+        margin: 0 0 5mm
+    }
+
+    .principles {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 4mm;
+        break-inside: avoid
+    }
+
+    .principle {
+        padding: 4mm
+    }
+
+    .principle .label {
+        font-size: 6.5pt;
+        margin-bottom: 2mm
+    }
+
+    .principle h3 {
+        font-size: 11pt;
+        line-height: 1.6;
+        margin-bottom: 2mm
+    }
+
+    .principle p {
+        font-size: 8pt;
+        line-height: 1.8
+    }
+
+    .principle-evidence {
+        font-size: 7pt;
+        line-height: 1.7;
+        margin-top: 3mm;
+        padding-top: 2mm
+    }
+
+    .tech-section {
+        margin-top: 5mm;
+        padding: 4mm;
+        break-inside: avoid
+    }
+
+    .tech-heading {
+        font-size: 13pt;
+        margin: 2mm 0 4mm
+    }
+
+    .tech-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 3mm
+    }
+
+    .tech-grid>div {
+        padding: 3mm
+    }
+
+    .tech-grid h3 {
+        font-size: 8pt;
+        margin-bottom: 2mm
+    }
+
+    .tech-grid ul {
+        font-size: 8pt;
+        line-height: 1.7
+    }
+
+    .tech-grid li {
+        margin: 1mm 0
+    }
+
+    .contact {
+        margin: 5mm 0 0;
+        padding: 4mm;
+        display: block;
+        break-inside: avoid
+    }
+
+    .contact h2 {
+        font-size: 13pt;
+        line-height: 1.5
+    }
+
+    .contact p:not(.label) {
+        font-size: 8pt
+    }
+
+    .contact .label {
+        font-size: 6.5pt
+    }
+}
+
+@media print {
+    #sv-cut .flow-layout {
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.8fr);
+        gap: 4mm
+    }
+
+    #sv-cut .case-details .flow-layout>.data-grid {
+        gap: 2mm
+    }
+
+    #sv-cut .case-details dd {
+        font-size: 7.5pt;
+        line-height: 1.6
+    }
+
+    #sv-cut .case-details .full-decision p,
+    #sv-cut .case-details .evidence-wide p {
+        font-size: 7.5pt;
+        line-height: 1.6
+    }
+
+    #sv-cut .case-details .full-decision h5 {
+        font-size: 8pt
+    }
+
+    #sv-cut .design-detail {
+        margin-top: 2mm;
+        padding-top: 2mm
+    }
+
+    #sv-cut .case-details .evidence-block {
+        margin-top: 2mm;
+        padding-top: 2mm
+    }
+
+    #sv-cut .detail-test-metrics {
+        margin-bottom: 2mm
+    }
+
+    #sv-cut .case-details table {
+        font-size: 6.8pt
+    }
+}
+
+@media print {
+    .detail-footer>.case-details>summary::before {
+        content: attr(data-project-title) " / ";
+        display: inline;
+        color: #596575;
+        font-size: 8pt;
+        font-weight: 500;
+        margin-right: 2mm
+    }
+}
+
+.print-masthead {
+    display: none
+}
+
+@media print {
+    .print-masthead {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 3mm;
+        border-bottom: 1px solid #dfe5ed;
+        padding: 0 0 3mm;
+        font-size: 8pt
+    }
+
+    .print-masthead span {
+        font-size: 7pt;
+        color: #596575
+    }
+}
+
+.print-line-break {
+    display: none
+}
+
+@media print {
+    .hero h1 .print-line-break {
+        display: block
+    }
+
+    .case .case-details dd {
+        text-wrap: pretty
+    }
+}
+
+/* pdf-comment-revisions */
+/* PDF annotation revisions: spacing, frame alignment and stronger outline. */
+.print-overview-scope {
+    display: none
+}
+
+@media print {
+    .hero-specialties {
+        flex-wrap: nowrap;
+        gap: 1mm
+    }
+
+    .hero-specialties span {
+        white-space: nowrap;
+        font-size: 6pt;
+        line-height: 1.5;
+        padding: 1mm 1.3mm;
+        letter-spacing: -.08pt;
+        flex-shrink: 0
+    }
+
+    .project-intro>.context {
+        padding-top: 4mm;
+        margin-top: 4mm;
+        margin-bottom: 0;
+        padding-bottom: 0
+    }
+
+    .project-intro>.context>p:last-child {
+        margin-bottom: 0
+    }
+
+    .project-intro {
+        padding-bottom: 4mm
+    }
+
+    .case-grid {
+        padding-top: 0
+    }
+
+    .screen-frame img {
+        height: 78mm;
+        max-height: 78mm
+    }
+
+    .flow-chart-area .diagram-scroll {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2mm 0 0;
+        overflow: visible
+    }
+
+    .flow-chart-area .workflow-svg {
+        width: 60%;
+        max-width: 60%;
+        min-width: 0;
+        margin: 0 auto
+    }
+
+    .print-overview-scope {
+        display: block;
+        margin: 5mm 0 0;
+        padding: 4mm 0 0;
+        border-top: .25mm solid #c5ceda;
+        break-inside: avoid
+    }
+
+    .print-overview-scope>.label {
+        font-size: 7pt;
+        letter-spacing: .5pt;
+        margin: 0 0 2mm
+    }
+
+    .overview-scope-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.45fr;
+        gap: 5mm
+    }
+
+    .overview-scope-grid h3 {
+        font-size: 9pt;
+        line-height: 1.6;
+        color: #315eca;
+        margin: 0 0 1.5mm
+    }
+
+    .overview-scope-grid p {
+        font-size: 8pt;
+        line-height: 1.75;
+        margin: 0;
+        color: #424b55;
+        orphans: 3;
+        widows: 3
+    }
+
+    .principles>.principle,
+    .contact {
+        border: .3mm solid #aab6c6;
+        border-radius: 0;
+        overflow: visible;
+        background: #fff
+    }
+
+    .principles>.principle {
+        min-width: 0
+    }
+}
+
+/* print-edge-spacing-fix */
+@media print {
+    main.wrap {
+        width: calc(100% - 4mm);
+        margin-left: 2mm;
+        margin-right: 2mm
+    }
+
+    .case-grid {
+        padding-top: 4mm;
+        gap: 5mm
+    }
+
+    .case-grid>.architecture-section>.decisions-label {
+        white-space: nowrap;
+        letter-spacing: .35pt;
+        margin-bottom: 3mm !important
+    }
+
+    .hero-stat.capability,
+    .competency,
+    .screen-frame,
+    .coord-center,
+    .coord-top span,
+    .tech-section,
+    .tech-grid>div,
+    .flow-chart-area .diagram-scroll {
+        border: .3mm solid #9aa8ba;
+        border-radius: 0
+    }
+
+    .principles>.principle,
+    .contact {
+        border: .35mm solid #8f9fb3;
+        border-radius: 0
+    }
+
+    .decisions .decision {
+        border-right: .25mm solid #b4c0d0;
+        border-top: .25mm solid #d2dae5;
+        border-bottom: .25mm solid #d2dae5;
+        border-radius: 0
+    }
+
+    .data-grid>div,
+    .design-detail,
+    .evidence-block,
+    .print-overview-scope {
+        border-top-color: #aab7c8
+    }
+}
+
+/* print-scope-rows */
+@media print {
+    .overview-scope-grid {
+        display: block
+    }
+
+    .overview-scope-grid>div {
+        display: grid;
+        grid-template-columns: 30mm minmax(0, 1fr);
+        gap: 4mm;
+        align-items: start;
+        margin-bottom: 2.5mm;
+        break-inside: avoid
+    }
+
+    .overview-scope-grid>div:last-child {
+        margin-bottom: 0
+    }
+
+    .overview-scope-grid h3 {
+        margin: 0;
+        font-size: 8.5pt;
+        line-height: 1.75
+    }
+
+    .overview-scope-grid p {
+        margin: 0;
+        font-size: 8pt;
+        line-height: 1.75
+    }
+}
+
+/* print-consistent-rules */
+@media print {
+
+    *,
+    *::before,
+    *::after {
+        border-color: #9ba9ba !important;
+        border-width: .15mm !important
+    }
+
+    .workflow-svg [stroke] {
+        stroke: #9ba9ba;
+        stroke-width: .55;
+        vector-effect: non-scaling-stroke
+    }
+
+    .workflow-svg marker path {
+        fill: #9ba9ba
+    }
+}
+
+/* print-flow-rule-spacing */
+@media print {
+    .case .case-details .flow-layout>.data-grid>div {
+        border-top-width: .08mm !important;
+        border-top-color: #c3ccd8 !important
+    }
+
+    .case .case-details .flow-layout>.data-grid>div:first-child {
+        border-top: 0 !important;
+        padding-top: 0
+    }
+
+    .case .case-details .project-metrics.detail-test-metrics {
+        margin-bottom: 5mm !important
+    }
+}
+
+/* print-title-bottom-rule-refinement */
+@media print {
+    .detail-footer>.case-details>.details-content {
+        padding-top: 6mm !important
+    }
+
+    *,
+    *::before,
+    *::after {
+        border-bottom-width: .075mm !important
+    }
+}
+
+/* print-design-heading-gap */
+@media print {
+    .case .case-details .design-detail {
+        padding-top: 5mm !important
+    }
+}
+
+/* print-detail-title-flush */
+@media print {
+    .detail-footer>.case-details>summary {
+        padding-left: 0 !important;
+        padding-right: 0 !important
+    }
+}
+
+/* print-soft-rounded-borders */
+@media print {
+
+    .hero-stat.capability,
+    .competency,
+    .screen-frame,
+    .coord-center,
+    .coord-top span,
+    .tech-section,
+    .tech-grid>div,
+    .flow-chart-area .diagram-scroll,
+    .principles>.principle,
+    .contact,
+    .decisions .decision {
+        border: 1px solid #e8ebeb !important;
+        border-radius: 4px !important
+    }
+
+    .decisions .decision {
+        border-left: 1px solid #e8ebeb !important
+    }
+}
+
+/* print-all-light-borders */
+@media print {
+
+    html body *,
+    html body *::before,
+    html body *::after {
+        border-color: #e8ebeb !important;
+        border-width: 1px !important
+    }
+
+    .pill,
+    .hero-specialties span,
+    .chips span,
+    .project-no,
+    .hero-stat.capability,
+    .competency,
+    .screen-frame,
+    .coord-center,
+    .coord-top span,
+    .tech-section,
+    .tech-grid>div,
+    .flow-chart-area .diagram-scroll,
+    .principles>.principle,
+    .contact,
+    .decisions .decision,
+    .case-details>summary {
+        border-radius: 4px !important
+    }
+
+    .workflow-svg [stroke] {
+        stroke: #e8ebeb;
+        stroke-width: 1;
+        vector-effect: non-scaling-stroke
+    }
+
+    .workflow-svg marker path {
+        fill: #c4cbd3
+    }
+}
+
+/* 추가 인쇄 조정 */
+@media print {
+    html body .case .case-details .flow-layout>.data-grid>div {
+        border-top-color: #e8ebeb !important;
+        border-top-width: 1px !important
+    }
+
+    .workflow-svg path[marker-end] {
+        stroke: #c4cbd3
+    }
+}
+
+/* print-summary-outer-width-inner-padding */
+@media print {
+    .detail-footer>.case-details>summary {
+        margin-left: -2mm !important;
+        margin-right: -2mm !important;
+        width: calc(100% + 4mm);
+        padding-left: 2mm !important;
+        padding-right: 2mm !important;
+        box-sizing: border-box
+    }
+}
+
+/* print-contact-three-lines */
+@media print {
+    .print-masthead {
+        align-items: flex-start
+    }
+
+    .print-masthead>span {
+        text-align: right;
+        line-height: 1.65
+    }
+
+    .print-masthead a {
+        color: inherit;
+        text-decoration: none
+    }
+}
+
+/* print-thanks-contact */
+.print-closing {
+    display: none
+}
+
+@media print {
+    .contact {
+        display: none !important
+    }
+
+    .print-closing {
+        display: block;
+        text-align: center;
+        margin-top: 5mm;
+        padding: 4mm 0 0;
+        break-inside: avoid
+    }
+
+    .print-closing h2 {
+        font-size: 15pt;
+        line-height: 1.5;
+        margin: 0 0 2mm;
+        color: #252c35
+    }
+
+    .print-closing .closing-name {
+        font-size: 10pt;
+        font-weight: 650;
+        margin: 0 0 1mm
+    }
+
+    .print-closing p {
+        font-size: 8pt;
+        line-height: 1.8;
+        color: #596575;
+        margin: 0
+    }
+
+    .print-closing a {
+        color: inherit;
+        text-decoration: none
+    }
+}
+
+/* print-positioning-and-commitment */
+@media print {
+    .print-closing {
+        margin-top: 3mm;
+        padding-top: 0
+    }
+
+    .closing-commitment {
+        text-align: left;
+        margin: 0 0 3mm
+    }
+
+    .print-closing .closing-commitment h2 {
+        font-size: 12pt;
+        line-height: 1.5;
+        margin: 0 0 2mm;
+        color: #252c35
+    }
+
+    .print-closing .closing-commitment p {
+        font-size: 8pt;
+        line-height: 1.75;
+        color: #424b55
+    }
+
+    .print-closing>h2 {
+        font-size: 13pt;
+        margin: 0 0 1.5mm
+    }
+
+    .print-closing .closing-name {
+        margin-bottom: .5mm
+    }
+
+    .print-closing>p {
+        font-size: 7.5pt;
+        line-height: 1.65
+    }
+
+    .how-build .how-description {
+        margin-bottom: 3mm
+    }
+
+    .how-build .principle {
+        padding: 3mm
+    }
+
+    .how-build .principle p {
+        font-size: 7.8pt;
+        line-height: 1.7
+    }
+
+    .how-build .principle-evidence {
+        margin-top: 2mm;
+        padding-top: 1.5mm;
+        font-size: 6.7pt
+    }
+
+    .how-build .tech-section {
+        margin-top: 3mm;
+        padding: 3mm
+    }
+
+    .how-build .tech-heading {
+        margin: 1mm 0 2mm
+    }
+
+    .how-build .tech-grid {
+        gap: 2mm
+    }
+
+    .how-build .tech-grid>div {
+        padding: 2.5mm
+    }
+
+    .how-build .tech-grid h3 {
+        margin-bottom: 1mm
+    }
+
+    .how-build .tech-grid ul {
+        font-size: 7.5pt;
+        line-height: 1.6
+    }
+
+    .how-build .tech-grid li {
+        margin: .6mm 0
+    }
+}
+
+/* print-requested-linebreaks-thanks-gap */
+@media print {
+    .closing-commitment {
+        margin-bottom: 9mm !important
+    }
+}
+
+/* print-commitment-emphasis */
+@media print {
+    .print-closing {
+        margin-top: 8mm !important
+    }
+
+    .print-closing .closing-commitment h2 {
+        font-size: 14pt;
+        line-height: 1.6;
+        margin-bottom: 3mm
+    }
+
+    .print-closing .closing-commitment p {
+        font-size: 9.5pt;
+        line-height: 1.85
+    }
+}
