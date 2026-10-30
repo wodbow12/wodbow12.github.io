@@ -34,7 +34,7 @@
 <link rel="stylesheet" href="css/typography.css?v=20261029"></head>
 
 <body id="top"><a class="skip" href="#projects">프로젝트 본문으로 이동</a>
-    <header class="global-header"><div class="global-header-inner"><div class="global-top"><a class="global-brand" href="./">이동원 <span>AI · AX / FULL-STACK</span></a><nav class="global-menu" aria-label="주 메뉴"><a href="./" class="is-current" aria-current="page">포트폴리오</a><a href="info/">Info</a><a class="header-action" href="downloads/lee-dongwon-resume.pdf" download>이력서 PDF ↓</a><a class="header-action" href="mailto:wodbow12@gmail.com">wodbow12@gmail.com ↗</a></nav></div><nav class="global-submenu" aria-label="페이지 내 이동"><a href="#top">소개</a><a href="#scenario-trailer">Scenario</a><a href="#muse-studio">MUSE</a><a href="#vfx-pipeline">VFX Pipeline</a><a href="#sv-cut">SV Cut</a><a href="#sv-player">SV Player</a><a href="#how-i-build">개발 역량</a></nav></div></header>
+    <header class="global-header"><div class="global-header-inner"><div class="global-top"><a class="global-brand" href="./">이동원 <span>AI · AX / FULL-STACK</span></a><nav class="global-menu" aria-label="주 메뉴"><a href="./" class="is-current" aria-current="page">포트폴리오</a><a href="info/">Info</a><a class="header-action" href="downloads/lee-dongwon-resume.pdf" download>이력서 PDF ↓</a><a class="header-action" href="mailto:wodbow12@gmail.com">wodbow12@gmail.com ↗</a></nav></div><nav class="global-submenu" aria-label="페이지 내 이동"><a href="#top">소개</a><a href="#scenario-trailer">Scenario</a><a href="#muse-studio">MUSE</a><a href="#vfx-pipeline">VFX Pipeline</a><a href="#sv-cut">SV Cut</a><a href="#sv-player">SV Player</a><a href="#comfyui-mcp">MCP 서버</a><a href="#how-i-build">개발 역량</a></nav></div></header>
     <main class="wrap">
         <div class="print-masthead"><strong>이동원 · AI·AX 개발 포트폴리오</strong><span><a
                     href="tel:01031267598">010-3126-7598</a><br><a
@@ -87,7 +87,7 @@
                 </a></div>
         </section>
         <div class="section-top" id="projects"><span><i class="dot" aria-hidden="true"></i>ENGINEERING CASE STUDIES [01
-                — 05]</span><span>PROBLEM → DESIGN → IMPLEMENTATION → VALIDATION</span></div>
+                — 06]</span><span>PROBLEM → DESIGN → IMPLEMENTATION → VALIDATION</span></div>
         <article class="case" id="scenario-trailer">
             <div class="case-head">
                 <div class="case-heading"><span class="project-no">PROJECT 01</span>
@@ -2090,6 +2090,145 @@
                 </details>
             </div>
         </article>
+        <article class="case" id="comfyui-mcp">
+            <div class="case-head">
+                <div class="case-heading"><span class="project-no">PROJECT 06 · PERSONAL</span>
+                    <h2>ComfyUI MCP 서버 · 에이전트용 이미지 생성 도구</h2>
+                </div><span class="trait"><i class="dot" aria-hidden="true"></i>MCP · TOOL INTERFACE DESIGN</span>
+            </div>
+            <div class="project-intro">
+                <div class="role"><b>ROLE</b>개인 프로젝트 · 2026.10 · 설계·구현·테스트 단독 수행</div>
+                <p>LLM 에이전트가 노드 그래프 대신 의미 파라미터만으로 ComfyUI 이미지 생성을 실행하도록 설계한 MCP 어댑터 서버</p>
+                <div class="chips stack">
+                    <span>Python 3.11</span><span>asyncio</span><span>FastMCP</span><span>httpx</span><span>websockets</span><span>PyYAML</span><span>Pillow</span><span>pytest</span><span>ComfyUI API</span>
+                </div>
+                <div class="context">
+                    <p class="label">PROBLEM &amp; CONTEXT</p>
+                    <p>ComfyUI를 프로그램에서 쓰려면 수백 줄의 노드 그래프 JSON을 만들어야 합니다. LLM 에이전트가 이를 직접 조립하면 링크 누락·노드 ID 오류·토큰 낭비가 생기고, 실행 중 상태를 알 수 없어 긴 작업이 실패로 오인됩니다.</p>
+                    <p>에이전트와 ComfyUI 사이에 MCP 서버를 두어 "워크플로 템플릿 + 파라미터" 수준의 Tool을 노출하고, WebSocket 진행률을 MCP 알림으로 중계하며, 실패 원인을 에이전트가 읽고 재시도할 수 있는 형태로 돌려주도록 설계했습니다.</p>
+                </div>
+            </div>
+            <div class="case-grid">
+                <div class="visual-column">
+                    <div class="screen-frame">
+                        <div class="screen-bar"><span><i class="screen-dots" aria-hidden="true"><i></i><i></i><i></i></i>COMFYUI MCP / ARCHITECTURE</span><span>구성 요소</span></div><img src="assets/images/comfyui-mcp.svg" alt="ComfyUI MCP 서버 아키텍처 · MCP 클라이언트, FastMCP 서버, ComfyUI" loading="lazy">
+                    </div>
+                    <p class="technical-caption"><span class="caption-label">[ComfyUI MCP 서버 · 구성 요소]</span>
+                        처리 흐름: tools/call → YAML 매핑으로 템플릿 치환 → /prompt 큐잉 → WebSocket 진행률 → MCP progress 알림 → 썸네일 + 원본 경로 반환</p>
+                </div>
+                <section class="architecture-section text-column">
+                    <p class="decisions-label">ARCHITECTURE &amp; DECISIONS</p>
+                    <div class="decisions">
+                        <div class="decision"><span>01</span>
+                            <div>
+                                <h3>그래프가 아니라 의미 파라미터를 노출</h3>
+                                <p>원시 워크플로 JSON을 받는 단일 Tool 대신<br>템플릿별 <code>generate_*</code> Tool로 호출 정확도와 토큰 비용을 함께 개선했습니다.</p>
+                            </div>
+                        </div>
+                        <div class="decision"><span>02</span>
+                            <div>
+                                <h3>매핑을 코드 밖으로 — YAML 1장이 Tool 1개</h3>
+                                <p>노드 제목 기반 매핑과 기동 시 Schema 생성으로<br>코드 수정 없이 워크플로를 추가하고, 설치된 모델만 enum으로 노출했습니다.</p>
+                            </div>
+                        </div>
+                        <div class="decision"><span>03</span>
+                            <div>
+                                <h3>실패를 예외가 아니라 에이전트의 다음 행동으로</h3>
+                                <p>원인과 재시도 힌트를 구조화 텍스트로 돌려주고,<br>진행률 중계·타임아웃 계층·<code>/history</code> 폴백으로 긴 작업의 오인 실패를 막았습니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <section class="print-overview-scope">
+                <p class="label">DELIVERABLES &amp; IMPLEMENTATION SCOPE</p>
+                <div class="overview-scope-grid">
+                    <div>
+                        <h3>주요 산출물</h3>
+                        <p>MCP 서버 패키지(Tool 5종 · Resource 2종), 워크플로 템플릿 매핑 YAML, 단위·프로토콜·통합 테스트 스크립트, GPU 없이 동작하는 API 호환 mock ComfyUI.</p>
+                    </div>
+                    <div>
+                        <h3>구현·확인 범위</h3>
+                        <p>pytest 28건(매핑·범위 클램프·WebSocket 이벤트 시퀀스·오류 분기) → MCP Inspector(tools/list·progress·resource) → Claude Desktop·Claude Code 자연어 end-to-end 확인.</p>
+                    </div>
+                </div>
+            </section>
+            <div class="detail-footer">
+                <p class="metric-note">저장소 테스트 기록 기준 · 상세 조건은 아래 펼치기</p>
+                <details class="case-details" open>
+                    <summary data-project-title="ComfyUI MCP 서버 · 에이전트용 이미지 생성 도구">데이터 흐름 · 설계 상세 · 검증 결과</summary>
+                    <div class="details-content">
+                        <section class="flow-detail">
+                            <h4>입력에서 결과물까지</h4>
+                            <div class="flow-layout">
+                                <dl class="data-grid">
+                                    <div>
+                                        <dt>입력</dt>
+                                        <dd>에이전트의 tools/call(프롬프트·크기·seed·steps·모델), YAML 매핑과 API 형식 그래프 템플릿</dd>
+                                    </div>
+                                    <div>
+                                        <dt>가공</dt>
+                                        <dd>JSON Schema 생성, 범위·step 정렬, 노드 제목 기반 입력 치환, 설치 모델 enum 반영</dd>
+                                    </div>
+                                    <div>
+                                        <dt>자동화</dt>
+                                        <dd>WebSocket 이벤트 → MCP progress 중계, 타임아웃·단절 시 /history 폴백, submit_job/get_job 이어받기</dd>
+                                    </div>
+                                    <div>
+                                        <dt>출력</dt>
+                                        <dd>512px 썸네일 image 콘텐츠 + 원본 경로·seed, 또는 원인·재시도 힌트가 담긴 구조화 오류 텍스트</dd>
+                                    </div>
+                                </dl>
+                                <div class="flow-chart-area">
+                                    <div class="workflow-legend"><span><i class="visual-style-1"></i>입력 데이터</span><span><i class="visual-style-2"></i>AI 처리</span><span><i class="visual-style-3"></i>조건·판단</span><span><i class="visual-style-4"></i>결과물</span></div>
+                                    <div class="diagram-scroll"><svg xmlns="http://www.w3.org/2000/svg" class="workflow-svg" viewBox="0 0 1000 899" role="img" aria-labelledby="comfyui-mcp-flow-title"><title id="comfyui-mcp-flow-title">ComfyUI MCP 서버 요청 처리: 입력, 검증, 실행·진행률, 결과와 복구 흐름</title><defs><marker id="comfyui-mcp-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#8b9b95" /></marker></defs><path d="M 285,76.16 L 285,89.16 L 500,89.16 L 500,102.16" fill="none" stroke="#8b9b95" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#comfyui-mcp-arrow)" /><path d="M 715,76.16 L 715,89.16 L 500,89.16 L 500,102.16" fill="none" stroke="#8b9b95" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#comfyui-mcp-arrow)" /><path d="M 500,144.32 L 500,170.32" fill="none" stroke="#8b9b95" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#comfyui-mcp-arrow)" /><path d="M 500,212.48 L 500,238.48" fill="none" stroke="#8b9b95" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#comfyui-mcp-arrow)" /><path d="M 500,280.64 L 500,306.64" fill="none" stroke="#8b9b95" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#comfyui-mcp-arrow)" /><path d="M 500,368.64 L 500,402.64" fill="none" stroke="#8b9b95" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#comfyui-mcp-arrow)" /><rect x="519.0" y="374.64" width="42" height="22" rx="3" fill="#ffffff" /><text x="540" y="389.64" text-anchor="middle" fill="#64756c" font-family="PortfolioPretendard, Malgun Gothic, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="15">통과</text><path d="M 500,444.80 L 500,470.80" fill="none" stroke="#8b9b95" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#comfyui-mcp-arrow)" /><path d="M 500,530.96 L 500,556.96" fill="none" stroke="#8b9b95" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#comfyui-mcp-arrow)" /><path d="M 500,618.96 L 500,635.96 L 180,635.96 L 180,652.96" fill="none" stroke="#8b9b95" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#comfyui-mcp-arrow)" /><rect x="319.0" y="624.9599999999999" width="42" height="22" rx="3" fill="#ffffff" /><text x="340" y="639.9599999999999" text-anchor="middle" fill="#64756c" font-family="PortfolioPretendard, Malgun Gothic, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="15">오류</text><path d="M 500,385.64 L 180,385.64 L 180,652.96" fill="none" stroke="#8b9b95" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#comfyui-mcp-arrow)" /><rect x="314.0" y="374.64" width="52" height="22" rx="3" fill="#ffffff" /><text x="340" y="389.64" text-anchor="middle" fill="#64756c" font-family="PortfolioPretendard, Malgun Gothic, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="15">미통과</text><path d="M 500,618.96 L 500,635.96 L 820,635.96 L 820,652.96" fill="none" stroke="#8b9b95" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#comfyui-mcp-arrow)" /><rect x="629.0" y="624.9599999999999" width="62" height="22" rx="3" fill="#ffffff" /><text x="660" y="639.9599999999999" text-anchor="middle" fill="#64756c" font-family="PortfolioPretendard, Malgun Gothic, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="15">타임아웃</text><path d="M 500,618.96 L 500,652.96" fill="none" stroke="#8b9b95" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#comfyui-mcp-arrow)" /><rect x="519.0" y="624.9599999999999" width="42" height="22" rx="3" fill="#ffffff" /><text x="540" y="639.9599999999999" text-anchor="middle" fill="#64756c" font-family="PortfolioPretendard, Malgun Gothic, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="15">완료</text><path d="M 500,695.12 L 500,721.12" fill="none" stroke="#8b9b95" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#comfyui-mcp-arrow)" /><path d="M 180,713.12 L 180,799.28" fill="none" stroke="#8b9b95" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#comfyui-mcp-arrow)" /><path d="M 180,859.44 L 180,873.44 L 36,873.44 L 36,46.08 L 155.0,46.08" fill="none" stroke="#8b9b95" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#comfyui-mcp-arrow)" /><rect x="155.0" y="16.00" width="260" height="60.16" rx="6" fill="#e8f2fb" stroke="#83a7c4" stroke-width="1.5" /><text x="285" y="52.08" fill="#24475d" text-anchor="middle" font-family="PortfolioPretendard, Malgun Gothic, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="18" font-weight="500"><tspan x="285" dy="-10">Claude · Claude Code</tspan><tspan x="285" dy="20">tools/call 요청</tspan></text><rect x="585.0" y="16.00" width="260" height="60.16" rx="6" fill="#e8f2fb" stroke="#83a7c4" stroke-width="1.5" /><text x="715" y="52.08" fill="#24475d" text-anchor="middle" font-family="PortfolioPretendard, Malgun Gothic, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="18" font-weight="500"><tspan x="715" dy="-10">workflows/*.yaml</tspan><tspan x="715" dy="20">+ API 그래프 템플릿</tspan></text><rect x="345.0" y="102.16" width="310" height="42.16" rx="6" fill="#f6f7f8" stroke="#afb9c1" stroke-width="1.5" /><text x="500" y="129.24" fill="#33424e" text-anchor="middle" font-family="PortfolioPretendard, Malgun Gothic, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="18" font-weight="500"><tspan x="500" dy="0">기동 시 Tool·JSON Schema 동적 등록</tspan></text><rect x="345.0" y="170.32" width="310" height="42.16" rx="6" fill="#f6f7f8" stroke="#afb9c1" stroke-width="1.5" /><text x="500" y="197.40" fill="#33424e" text-anchor="middle" font-family="PortfolioPretendard, Malgun Gothic, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="18" font-weight="500"><tspan x="500" dy="0">/object_info 조회 → 모델 목록 enum</tspan></text><rect x="345.0" y="238.48" width="310" height="42.16" rx="6" fill="#f6f7f8" stroke="#afb9c1" stroke-width="1.5" /><text x="500" y="265.56" fill="#33424e" text-anchor="middle" font-family="PortfolioPretendard, Malgun Gothic, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="18" font-weight="500"><tspan x="500" dy="0">파라미터 범위·step 정렬 · 노드 치환</tspan></text><polygon points="500,306.64 615,337.64 500,368.64 385,337.64" fill="#fff4dc" stroke="#c5a363" stroke-width="1.5" /><text x="500" y="343.64" fill="#5c4a1f" text-anchor="middle" font-family="PortfolioPretendard, Malgun Gothic, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="17" font-weight="500"><tspan x="500" dy="0">필수값·모델 검증 통과?</tspan></text><rect x="345.0" y="402.64" width="310" height="42.16" rx="6" fill="#f6f7f8" stroke="#afb9c1" stroke-width="1.5" /><text x="500" y="429.72" fill="#33424e" text-anchor="middle" font-family="PortfolioPretendard, Malgun Gothic, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="18" font-weight="500"><tspan x="500" dy="0">WebSocket 연결 → /prompt 큐잉</tspan></text><rect x="345.0" y="470.80" width="310" height="60.16" rx="6" fill="#f6f7f8" stroke="#afb9c1" stroke-width="1.5" /><text x="500" y="506.88" fill="#33424e" text-anchor="middle" font-family="PortfolioPretendard, Malgun Gothic, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="18" font-weight="500"><tspan x="500" dy="-10">executing·progress 이벤트 수신</tspan><tspan x="500" dy="20">→ MCP progress 알림 (0.5s 스로틀)</tspan></text><polygon points="500,556.96 615,587.96 500,618.96 385,587.96" fill="#fff4dc" stroke="#c5a363" stroke-width="1.5" /><text x="500" y="593.96" fill="#5c4a1f" text-anchor="middle" font-family="PortfolioPretendard, Malgun Gothic, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="17" font-weight="500"><tspan x="500" dy="0">완료 · 오류 · 타임아웃?</tspan></text><rect x="50.0" y="652.96" width="260" height="60.16" rx="6" fill="#e6f3ec" stroke="#80aa94" stroke-width="1.5" /><text x="180" y="689.04" fill="#2f5544" text-anchor="middle" font-family="PortfolioPretendard, Malgun Gothic, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="18" font-weight="500"><tspan x="180" dy="-10">구조화 오류 텍스트 반환</tspan><tspan x="180" dy="20">원인 + 재시도 힌트 (isError)</tspan></text><rect x="690.0" y="652.96" width="260" height="60.16" rx="6" fill="#e6f3ec" stroke="#80aa94" stroke-width="1.5" /><text x="820" y="689.04" fill="#2f5544" text-anchor="middle" font-family="PortfolioPretendard, Malgun Gothic, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="18" font-weight="500"><tspan x="820" dy="-10">prompt_id 반환 · /history 폴백</tspan><tspan x="820" dy="20">get_job으로 이어받기</tspan></text><rect x="345.0" y="652.96" width="310" height="42.16" rx="6" fill="#f6f7f8" stroke="#afb9c1" stroke-width="1.5" /><text x="500" y="680.04" fill="#33424e" text-anchor="middle" font-family="PortfolioPretendard, Malgun Gothic, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="18" font-weight="500"><tspan x="500" dy="0">/view 원본 수집 → 512px 썸네일 생성</tspan></text><rect x="345.0" y="721.12" width="310" height="42.16" rx="6" fill="#e6f3ec" stroke="#80aa94" stroke-width="1.5" /><text x="500" y="748.20" fill="#2f5544" text-anchor="middle" font-family="PortfolioPretendard, Malgun Gothic, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="18" font-weight="500"><tspan x="500" dy="0">image 콘텐츠(썸네일) + 원본 경로·seed</tspan></text><rect x="50.0" y="799.28" width="260" height="60.16" rx="6" fill="#f0ebf9" stroke="#a897be" stroke-width="1.5" /><text x="180" y="835.36" fill="#45345c" text-anchor="middle" font-family="PortfolioPretendard, Malgun Gothic, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="18" font-weight="500"><tspan x="180" dy="-10">에이전트: 원인 확인 후</tspan><tspan x="180" dy="20">파라미터 수정 · 재시도</tspan></text></svg></div>
+                                    <p class="workflow-note">동기 호출(진행률 알림)이 기본 경로이며, 배치·장시간 작업은 submit_job/get_job 비동기 경로를 별도로 제공합니다. stdio 전송에서는 stdout이 JSON-RPC 채널이므로 로그는 stderr·파일로만 기록합니다.</p>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="design-detail">
+                            <h4>설계 판단과 구현</h4>
+                            <div class="full-decisions">
+                                <div class="full-decision">
+                                    <h5>Tool 추상화 수준 — 템플릿 + 의미 파라미터</h5>
+                                    <p>LLM이 노드 그래프를 직접 조립하면 실패율과 토큰 비용이 급증합니다. <code>generate_image(prompt, width, seed…)</code>처럼 파라미터만 노출하고, 노드는 ID 대신 <code>_meta.title</code>(없으면 <code>class_type#순번</code>)로 식별해 ComfyUI에서 템플릿을 다시 저장해도 매핑이 깨지지 않게 했습니다. YAML의 <code>type·min·max·default·description</code>은 그대로 JSON Schema가 되고, <code>choices_from</code>은 기동 시 <code>/object_info</code>를 조회해 실제 설치된 체크포인트·LoRA만 enum으로 채웁니다. 매핑 오류는 런타임이 아니라 서버 시작 시 실패하도록 검증합니다.</p>
+                                </div>
+                                <div class="full-decision">
+                                    <h5>실행 방식 — 동기 + 진행률 알림을 기본, 잡 방식은 옵션</h5>
+                                    <p>단일 이미지는 20~60초라 한 번의 Tool 호출로 끝내는 것이 모델과 사용자 모두에게 단순합니다. 큐잉 전에 WebSocket을 먼저 열고 같은 <code>client_id</code>로 <code>/prompt</code>를 호출해 초기 이벤트를 놓치지 않게 했고, <code>progress</code> 이벤트는 0.5초 스로틀로 MCP progress notification에 전달합니다. HTTP 30초·WebSocket 600초의 타임아웃 계층을 두고, 초과 시 <code>prompt_id</code>를 돌려줘 <code>get_job</code>으로 이어받게 했습니다. 연결이 끊기면 <code>/history</code>를 조회해 이미 끝난 작업이 실패로 보고되지 않도록 했습니다.</p>
+                                </div>
+                                <div class="full-decision">
+                                    <h5>결과와 오류 — 에이전트가 다음 행동을 고를 수 있는 형태</h5>
+                                    <p>1024² PNG는 1~2MB라 컨텍스트를 낭비하므로 긴 변 512px 썸네일을 image 콘텐츠로, 원본은 경로와 seed 텍스트로 분리해 반환합니다. 실패는 예외 대신 <code>isError</code>와 읽을 수 있는 원인(모델 파일 없음, VRAM 부족, 검증 실패 노드·필드)으로 돌려줘 에이전트가 파라미터를 바꿔 재시도할 수 있게 했습니다. 의존 라이브러리의 stdout 출력이 프로토콜을 깨뜨리지 않도록 기동 직후 stdout을 stderr로 리다이렉트했습니다.</p>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="evidence-block">
+                            <div class="project-metrics detail-test-metrics">
+                                <div><strong>5 + 2</strong><small>Tool · Resource</small></div>
+                                <div><strong>28</strong><small>pytest 통과</small></div>
+                                <div><strong>767→15KB</strong><small>응답 이미지 크기</small></div>
+                                <div><strong>2048→1024</strong><small>OOM 후 재시도 성공</small></div>
+                            </div>
+                            <h4>단위·프로토콜·실제 클라이언트의 세 층으로 검증했습니다.</h4>
+                            <div class="evidence-wide">
+                                <div>
+                                    <p>pytest로 <code>WorkflowTemplate.render()</code>의 노드 치환, step 정렬과 범위 클램프, 잘못된 target에서의 기동 실패를 확인했습니다. websockets 목 서버로 <code>status → executing → progress ×N → executed → executing(null)</code> 시퀀스를 재생해 진행률 콜백 횟수와 최종 이미지 수집, <code>execution_error</code> 분기를 검증했습니다.</p>
+                                    <div class="evidence-chain"><span>매핑 단위 테스트</span><b>→</b><span>WS 이벤트 재생</span><b>→</b><span>MCP Inspector</span><b>→</b><span>Claude Desktop · Code</span><b>→</b><span>OOM 재시도 흐름</span></div>
+                                    <p class="evidence-note">2048px 요청이 GPU 메모리 부족으로 실패했을 때 힌트대로 1024px로 재시도해 성공하는 흐름을 확인했습니다. 테스트 중 연결이 정상 종료될 때 미완료 작업을 "완료"로 보고하던 결함을 발견해 수정했습니다. 성공률·절감 비율 같은 집계 수치는 측정 범위를 제한해 기재하지 않았습니다.</p>
+                                </div>
+                                <div>
+                                    <h5>검증 과정</h5>
+                                    <p>MCP Inspector로 tools/list 스키마, tool 호출, progress notification 수신, resource 읽기를 확인한 뒤 Claude Desktop과 Claude Code에 서버를 등록해 "고양이 사진 1장 만들어줘" 같은 자연어로 end-to-end 생성과, 실패 메시지를 보고 스스로 재시도하는지를 확인했습니다. GPU가 없는 환경에서도 API 호환 mock ComfyUI로 같은 절차를 재현할 수 있게 했습니다.</p>
+                                    <h5>구현 결과</h5>
+                                    <p>새 워크플로는 ComfyUI에서 API JSON 내보내기 → YAML 10줄 작성 → 서버 재시작의 세 단계로 추가됩니다. 원격 ComfyUI에는 Streamable HTTP 전송으로 전환하고 <code>/view</code> URL을 반환하도록 분기할 수 있게 구조를 남겼습니다.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </details>
+            </div>
+        </article>
         <section class="how-build" id="how-i-build">
             <p class="eyebrow">ENGINEERING PRINCIPLES</p>
             <h2>HOW I BUILD</h2>
@@ -2114,7 +2253,8 @@
                     <p class="label">PRINCIPLE 03</p>
                     <h3>실패를 재현하고 개선에 반영</h3>
                     <p>씬 추천 번호 오류, 컷 경계의 1프레임 차이, 생성 요청 실패를 재현했습니다. 검증 기록을 바탕으로 처리 규칙과 재시도·복구 경로를 개선했습니다.</p><a
-                        class="principle-evidence" href="#sv-cut">SV Cut · 원본 픽셀로 1프레임 경계 차이 검증 ↗</a>
+                        class="principle-evidence" href="#sv-cut">SV Cut · 원본 픽셀로 1프레임 경계 차이 검증 ↗</a><a
+                        class="principle-evidence" href="#comfyui-mcp">MCP 서버 · 실패를 원인·재시도 힌트로 돌려주는 Tool 설계 ↗</a>
                 </div>
             </div>
             <div class="tech-section">
@@ -2128,6 +2268,7 @@
                             <li>Milvus · 임베딩 기반 RAG</li>
                             <li>TransNetV2 · PyTorch</li>
                             <li>ComfyUI · 이미지·영상 생성</li>
+                            <li>MCP 서버 · FastMCP · Tool 설계</li>
                         </ul>
                     </div>
                     <div>

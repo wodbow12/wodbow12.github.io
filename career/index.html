@@ -13,7 +13,7 @@
 <div class="global-top">
 <a class="global-brand" href="../index.html">이동원 <span>AI · AX / FULL-STACK</span></a><nav class="global-menu" aria-label="주 메뉴"><a href="../index.html">포트폴리오</a><a href="../info/">Info</a><a class="header-action" href="../downloads/lee-dongwon-resume.pdf" download>이력서 PDF ↓</a><a class="header-action" href="mailto:wodbow12@gmail.com">wodbow12@gmail.com ↗</a></nav>
 </div>
-<nav class="global-submenu" aria-label="페이지 내 이동"><a href="#summary">경력 요약</a><a href="#company-0">스톤브이스튜디오</a><a href="#company-1">투링크</a><a href="#company-2">한국선재</a><a href="#company-3">포스크리에이티브파티</a><a href="#company-4">케이트</a><a href="#company-5">에이지웍스</a><a href="#skills">기술·학력</a></nav>
+<nav class="global-submenu" aria-label="페이지 내 이동"><a href="#summary">경력 요약</a><a href="#company-0">스톤브이스튜디오</a><a href="#personal-0">개인 프로젝트</a><a href="#company-1">투링크</a><a href="#company-2">한국선재</a><a href="#company-3">포스크리에이티브파티</a><a href="#company-4">케이트</a><a href="#company-5">에이지웍스</a><a href="#skills">기술·학력</a></nav>
 </div>
 </header><main class="career-document"><section class="doc-title" id="summary"><p class="label">CAREER HISTORY</p>
 <h1>경력기술서</h1>
@@ -364,6 +364,42 @@
 </li>
 </ul>
 <p class="record-tech"><b>기술 환경</b> n8n · JavaScript · Python · vLLM · REST API · RSS · Mattermost Webhook · Gmail OAuth2</p>
+</section>
+</article>
+<article class="career-company" id="personal-0"><header class="company-heading"><div>
+<p class="company-index">PERSONAL PROJECT</p>
+<h3>개인 프로젝트</h3>
+<p class="company-role">LLM 에이전트 도구 서버 설계·구현</p>
+</div>
+<p class="company-period">2026.10</p>
+</header>
+<section class="career-block" id="comfyui-mcp"><h4>ComfyUI MCP 서버 · LLM 에이전트용 이미지 생성 도구 서버</h4>
+<p class="record-period">프로젝트 기간 · 2026.10 · 설계·구현·테스트 단독</p>
+<h5>담당업무</h5>
+<p class="responsibility">ComfyUI 이미지 생성 파이프라인을 MCP(Model Context Protocol) 서버로 감싸, Claude 같은 LLM 에이전트가 노드 그래프 대신 의미 파라미터만으로 생성을 실행하고 결과를 확인·재시도할 수 있도록 설계·구현했습니다.</p>
+<h5>주요내용</h5>
+<ol class="work-list">
+<li>
+<strong>Tool 추상화 수준 결정과 선언형 도구 등록</strong><p>원시 워크플로 JSON을 받는 단일 Tool 대신 템플릿별 <code>generate_*</code> Tool에 프롬프트·해상도·seed 같은 의미 파라미터만 노출해 호출 정확도와 토큰 비용을 개선했습니다. 노드·입력·파라미터 매핑을 YAML로 분리하고 기동 시 JSON Schema와 Tool을 동적 등록해, 코드 수정 없이 "API JSON 내보내기 → YAML 10줄 → 재시작" 세 단계로 워크플로를 추가합니다. 노드는 ID 대신 제목으로 식별해 템플릿 재저장에도 매핑이 유지되고, <code>/object_info</code> 조회로 설치된 모델만 enum에 반영해 없는 모델 호출을 사전 차단했습니다.</p>
+</li>
+<li>
+<strong>WebSocket 진행률 중계와 장시간 작업 복원력</strong><p>큐잉 전에 WebSocket을 먼저 연결하고 같은 client_id로 /prompt를 호출해 초기 이벤트 누락을 막았습니다. executing·progress·executed·execution_error 이벤트를 파싱해 MCP progress notification으로 스텝 단위 진행률을 전달하고(0.5초 스로틀), HTTP 30초·WebSocket 600초의 타임아웃 계층을 두었습니다. 연결 단절 시 /history 조회로 완료 여부를 확인하고, 타임아웃 시 prompt_id를 반환해 submit_job/get_job으로 이어받도록 했습니다.</p>
+</li>
+<li>
+<strong>에이전트가 스스로 복구할 수 있는 오류·결과 설계</strong><p>실패를 예외 대신 isError와 읽을 수 있는 원인(모델 파일 없음, VRAM 부족, 검증 실패 노드·필드)으로 반환해 에이전트가 파라미터를 바꿔 재시도하는 루프를 구성했습니다. 결과는 긴 변 512px 썸네일 image 콘텐츠와 원본 경로·seed 텍스트로 분리해 컨텍스트 소모를 줄였고, stdio 전송에서 stdout이 JSON-RPC 채널임을 고려해 로그를 stderr·파일로만 기록하고 의존 라이브러리의 stdout 출력을 리다이렉트했습니다.</p>
+</li>
+</ol>
+<h5>주요성과</h5>
+<ul class="achievement-list">
+<li>
+<strong>자연어 한 번의 요청으로 이미지 생성 end-to-end 자동화</strong><p>Tool 5종(list_workflows·generate·upload_image·submit_job/get_job·list_models)과 Resource 2종을 구성하고, Claude Desktop·Claude Code에 등록해 자연어 요청으로 생성부터 썸네일 확인까지 이어지는 흐름을 검증했습니다. 2048px 요청이 GPU 메모리 부족으로 실패했을 때 힌트대로 1024px로 재시도해 성공하는 자가 복구 흐름을 확인했습니다.</p>
+</li>
+<li>
+<strong>세 층의 검증 체계</strong><p>pytest 28건으로 매핑 치환·범위 클램프·기동 시 매핑 검증과 WebSocket 목 서버 이벤트 시퀀스(progress 콜백 횟수·이미지 수집·오류 분기)를 확인하고, MCP Inspector로 프로토콜을, 실제 클라이언트로 사용성을 검증했습니다. GPU 없이 동작하는 API 호환 mock ComfyUI로 end-to-end 데모를 재현할 수 있게 했습니다.</p>
+<p>테스트 중 연결이 정상 종료될 때 미완료 작업을 완료로 보고하던 결함을 발견·수정했습니다. 썸네일 반환으로 응답 이미지 크기는 767KB에서 15KB로 줄었습니다.</p>
+</li>
+</ul>
+<p class="record-tech"><b>기술 환경</b> Python 3.11 · asyncio · MCP(FastMCP) · httpx · websockets · PyYAML · Pillow · pytest · ComfyUI HTTP/WebSocket API · stdio / Streamable HTTP</p>
 </section>
 </article>
 <article class="career-company" id="company-1"><div class="company-heading">

@@ -1,0 +1,17 @@
+flowchart TD
+  A[Claude · Claude Code tools/call] --> C[기동 시 Tool·JSON Schema 동적 등록]
+  B[workflows/*.yaml + API 그래프 템플릿] --> C
+  C --> D[/object_info 조회 → 모델 목록 enum]
+  D --> E[파라미터 범위·step 정렬 · 노드 치환]
+  E --> F{필수값·모델 검증 통과?}
+  F -- 미통과 --> G[구조화 오류 텍스트 반환 isError + 재시도 힌트]
+  F -- 통과 --> H[WebSocket 연결 → /prompt 큐잉]
+  H --> I[executing·progress 이벤트 → MCP progress 알림]
+  I --> J{완료 · 오류 · 타임아웃?}
+  J -- 오류 --> K[execution_error 원인 반환]
+  J -- 타임아웃 --> L[prompt_id 반환 · /history 폴백 · get_job]
+  J -- 완료 --> M[/view 원본 수집 → 512px 썸네일]
+  M --> N[image 콘텐츠 + 원본 경로·seed]
+  G --> R[에이전트: 파라미터 수정 · 재시도]
+  K --> R
+  R --> A
