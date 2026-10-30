@@ -92,21 +92,21 @@
             <div class="case-head">
                 <div class="case-heading"><span class="project-no">PROJECT 01</span>
                     <h2>시나리오 분석·제작 지원 플랫폼</h2>
-                </div><span class="trait"><i class="dot" aria-hidden="true"></i>RAG · GENERATIVE PIPELINE</span>
+                </div><span class="trait"><i class="dot" aria-hidden="true"></i>AGENT TOOL LAYER · GENERATIVE PIPELINE</span>
             </div>
             <div class="project-intro">
-                <div class="role"><b>ROLE</b>업무 개선 제안 · 기획 · 아키텍처 설계 · 프론트엔드·백엔드 개발 단독 수행</div>
-                <p>시나리오 분석과 견적·이미지·영상 생성을 연결한 AI 제작 지원 플랫폼</p>
+                <div class="role"><b>ROLE</b>기술 리드 · 기획 · 아키텍처 설계 · 프론트엔드·백엔드 개발 · 제작 관리 Agent의 Tool·Action 설계</div>
+                <p>시나리오 분석과 견적·이미지·영상 생성을 연결하고, 조회 Tool과 실행 Action으로 제작 관리를 보조하는 AI VFX 플랫폼 — 문화체육관광부·한국콘텐츠진흥원 '2025년 K-콘텐츠 AI 혁신 선도 프로젝트' 과제(CJ 4DPLEX 주관 컨소시엄)</p>
                 <div class="chips stack">
                     <span>Next.js</span><span>React</span><span>TypeScript</span><span>Python</span><span>Flask</span><span>SQLAlchemy</span><span>Milvus</span><span>vLLM</span><span>LM
-                        Studio</span><span>ComfyUI</span><span>Celery</span><span>Redis</span><span>FFmpeg</span>
+                        Studio</span><span>ComfyUI</span><span>Celery</span><span>Redis</span><span>PostgreSQL</span><span>Pydantic</span><span>Prometheus</span><span>pytest</span><span>FFmpeg</span>
                 </div>
                 <div class="context">
                     <p class="label">PROBLEM & CONTEXT</p>
                     <p>시나리오를 분석한 결과가 견적 검토와 이미지·영상 제작에 이어지려면, 장면·인물·샷 정보를 각 작업에서 재사용할 수 있어야 했습니다.<br>시나리오를 공통 제작 데이터로
                         구조화하고, 분석 결과를 후속 작업에 전달하는 플랫폼을 제안했습니다.</p>
                     <p>시나리오 입력을 출발점으로 씬 분석·견적과 컨셉·영상 제작을 연결했습니다. AI 추천과 생성 결과를 사용자가 검토·선택할 수 있도록 구성하고, 장시간 작업은 비동기
-                        처리했습니다.</p>
+                        처리했습니다.<br>2026년 5월부터는 PM·PD·슈퍼바이저의 질문에 근거 데이터로 답하고 작업을 실행하는 제작 관리 Agent를 더했습니다. 조회 Tool 6개를 통일 계약으로 등록하고, 실행 Action 31개는 현재 작업 단계에 속한 것만 발화하도록 범위를 제한했습니다.</p>
                 </div>
             </div>
             <div class="case-grid">
@@ -137,8 +137,8 @@
                         </div>
                         <div class="decision"><span>03</span>
                             <div>
-                                <h3>생성 작업과 API 응답의 생명주기 분리</h3>
-                                <p>Celery·Redis와 ComfyUI 서버 분배로 생성 작업을 비동기 처리하고 실패 노드·재요청에 대응했습니다.</p>
+                                <h3>Tool 계약과 실행 범위 제어</h3>
+                                <p>조회 Tool 6개를 같은 계약으로 레지스트리에 두고, 실행 Action 31개는 작업 단계별로 허용 범위를 제한했습니다. LLM 호출에는 서킷 브레이커를 적용했습니다.</p>
                             </div>
                         </div>
                     </div>
@@ -153,7 +153,7 @@
                     </div>
                     <div>
                         <h3>구현·확인 범위</h3>
-                        <p>2026년 7월 단일 PDF 통합 테스트: 61개 씬 분석, 컨셉 이미지 72개, 서로 다른 영상 18개와 60초 MP4 출력 확인.<br>선택 반영과 품질 관련 검증
+                        <p>2026년 7월 단일 PDF 통합 테스트: 61개 씬 분석, 컨셉 이미지 72개, 서로 다른 영상 18개와 60초 MP4 출력 확인. Tool·Action·브레이커·가드에 pytest를 두어 백엔드 테스트 파일 98개로 회귀 관리.<br>선택 반영과 품질 관련 검증
                             조건은 다음 페이지에 구분.</p>
                     </div>
                 </div>
@@ -497,9 +497,8 @@
                                         구성했습니다. JSON 형식이 맞더라도 잘못된 장면이 후속 생성에 전달되지 않도록 검증 범위를 넓혔습니다.</p>
                                 </div>
                                 <div class="full-decision">
-                                    <h5>생성 작업과 API 응답의 생명주기 분리</h5>
-                                    <p>Celery·Redis로 이미지·영상 생성을 비동기 처리하고 여러 ComfyUI 서버에 작업을 분배했습니다. 실패 노드 배정 제외, 재요청, 연속
-                                        실패 시 호출 차단을 적용해 생성 서버 장애에 대응했습니다.</p>
+                                    <h5>Tool 계약과 실행 범위 제어</h5>
+                                    <p>견적 요약, 씬 개요, 일정 지표, 인력 부하, ShotGrid 견적, 유사 사례 검색 6개 조회 Tool을 순수 데이터 함수로 구현하고, 모든 Tool이 tool·available·summary·metrics·source·reason 6개 필드의 같은 계약을 반환하도록 레지스트리에 등록했습니다. LLM에는 600자 이내 집계 요약만 주입해 근거 수치만 쓰게 하고 응답에 출처 배지를 붙였습니다. 씬 선택, 캐릭터 생성·수정, 컨셉 재생성, 트레일러 출력 등 실행 Action 31개는 현재 작업 단계(탭)에 속한 것만 발화하며, 기존 API 엔드포인트를 경유해 중복 실행·동시성·멱등성 가드를 재사용합니다. LM Studio·vLLM 호출에는 서킷 브레이커(연속 3회 실패 시 60초 차단, 반개방 후 복구)를 두고, 차단 중에는 규칙 기반 경로로 전환합니다. 생성 작업은 Celery·Redis로 비동기 처리하고 여러 ComfyUI 서버에 분배하며, 실패 노드 배정 제외와 연속 실패 시 호출 차단으로 생성 서버 장애에 대응했습니다.</p>
                                 </div>
                             </div>
                         </section>
@@ -536,6 +535,8 @@
                                     <h5>구현 결과</h5>
                                     <p>시나리오를 씬·샷 데이터로 구조화하고 견적 검토와 생성형 AI 제작을 연결했습니다. 검색·추천 결과의 검증, 비동기 생성 처리, 실패 복구와 결과
                                         확인을 포함한 제작 흐름을 구현했습니다.</p>
+                                    <h5>과제 산출물</h5>
+                                    <p>CJ 4DPLEX 주관, 스톤브이스튜디오 등 4개사 컨소시엄 과제의 산출물로 영화 '칼: 고두막한의 검' 실제 촬영본 기반 트레일러를 플랫폼으로 제작했고, KCON JAPAN 2026 K-CINEMA SHOWCASE(2026.05, 마쿠하리 멧세)에서 상영됐습니다.</p>
                                 </div>
                             </div>
                         </section>
@@ -2264,8 +2265,10 @@
                     <div>
                         <h3>AI / GENERATION</h3>
                         <ul>
+                            <li>Agent Tool 레지스트리 · 실행 범위 제어</li>
                             <li>LLM 역할 분담 · 병렬 리뷰</li>
-                            <li>Milvus · 임베딩 기반 RAG</li>
+                            <li>Milvus · 임베딩 기반 RAG · gte-multilingual(sentence-transformers)</li>
+                            <li>LangChain PromptTemplate · Langfuse 트레이싱</li>
                             <li>TransNetV2 · PyTorch</li>
                             <li>ComfyUI · 이미지·영상 생성</li>
                             <li>MCP 서버 · FastMCP · Tool 설계</li>
